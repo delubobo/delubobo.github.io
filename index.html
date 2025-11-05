@@ -405,6 +405,11 @@
                 // Update nav logo
                 document.getElementById('nav-logo').textContent = data.profile.firstName + ' ' + data.profile.lastName;
 
+                // Refresh observers to watch newly rendered content
+                if (window.app && window.app.refreshObservers) {
+                    window.app.refreshObservers();
+                }
+
                 // Trigger animations after content is loaded
                 setTimeout(() => {
                     document.querySelectorAll('.fade-in-up').forEach(el => {

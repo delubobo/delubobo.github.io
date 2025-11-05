@@ -176,17 +176,38 @@ class PortfolioApp {
             });
         }, observerOptions);
 
+        // Store observer for later use
+        this.observer = observer;
+
+        // Observe elements
+        this.observeElements();
+    }
+
+    /**
+     * Observe elements for animations (can be called multiple times)
+     */
+    observeElements() {
+        if (!this.observer) return;
+
         // Observe elements with fade-in-up class
         document.querySelectorAll('.fade-in-up').forEach(el => {
-            el.classList.add('fade-in-up');
-            observer.observe(el);
+            this.observer.observe(el);
         });
 
-        // Observe cards, timeline items, project cards
+        // Observe cards, timeline items, project cards, stat boxes
         document.querySelectorAll('.card, .timeline-item, .project-card, .stat-box, .skill-item').forEach(el => {
-            el.classList.add('fade-in-up');
-            observer.observe(el);
+            if (!el.classList.contains('fade-in-up')) {
+                el.classList.add('fade-in-up');
+            }
+            this.observer.observe(el);
         });
+    }
+
+    /**
+     * Reinitialize observers for dynamically added content
+     */
+    refreshObservers() {
+        this.observeElements();
     }
 
     /**
@@ -367,5 +388,6 @@ const utils = {
 // Initialize app when DOM is ready
 const app = new PortfolioApp();
 
-// Make utilities globally available
+// Make app and utilities globally available
+window.app = app;
 window.portfolioUtils = utils;
