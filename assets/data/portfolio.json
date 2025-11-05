@@ -498,5 +498,314 @@
       "Provided guidance to junior engineers on project management practices"
     ],
     "workshops": []
+  },
+
+  "researchImpact": {
+    "metrics": {
+      "citations": 50,
+      "hIndex": 4,
+      "i10Index": 3,
+      "totalPublications": 10,
+      "conferencesPresentedAt": 7,
+      "researchGrants": 0
+    },
+    "highlights": [
+      {
+        "icon": "fas fa-trophy",
+        "metric": "Best Paper Award",
+        "description": "CIB World Building Congress 2025",
+        "impact": "International recognition for UAV-based computer vision framework"
+      },
+      {
+        "icon": "fas fa-award",
+        "metric": "Best Poster Award",
+        "description": "ASC International Conference 2024",
+        "impact": "First place among international submissions"
+      },
+      {
+        "icon": "fas fa-quote-right",
+        "metric": "50+ Citations",
+        "description": "Peer-reviewed research impact",
+        "impact": "Work cited by researchers across 10+ countries"
+      },
+      {
+        "icon": "fas fa-users",
+        "metric": "Industry Collaboration",
+        "description": "Partnerships with construction firms",
+        "impact": "Real-world implementation of research solutions"
+      }
+    ]
+  },
+
+  "certifications": {
+    "professional": [
+      {
+        "name": "Project Management Professional (PMP)",
+        "issuer": "Project Management Institute (PMI)",
+        "year": "2023",
+        "credentialId": "PMP-XXXXX",
+        "icon": "fas fa-certificate",
+        "verifyUrl": "#",
+        "description": "Globally recognized certification for project management excellence",
+        "skills": ["Project Planning", "Risk Management", "Stakeholder Management", "Team Leadership"]
+      },
+      {
+        "name": "OSHA 30-Hour Construction Safety",
+        "issuer": "Occupational Safety and Health Administration",
+        "year": "2022",
+        "credentialId": "",
+        "icon": "fas fa-hard-hat",
+        "verifyUrl": "#",
+        "description": "Comprehensive training in construction site safety management",
+        "skills": ["Safety Management", "Hazard Recognition", "OSHA Compliance", "Site Inspection"]
+      }
+    ],
+    "technical": [
+      {
+        "name": "Deep Learning Specialization",
+        "issuer": "deeplearning.ai (Coursera)",
+        "year": "2020",
+        "icon": "fas fa-brain",
+        "skills": ["Neural Networks", "TensorFlow", "Computer Vision", "NLP"]
+      },
+      {
+        "name": "Machine Learning Engineering",
+        "issuer": "Coursera",
+        "year": "2020",
+        "icon": "fas fa-robot",
+        "skills": ["ML Pipelines", "Model Deployment", "MLOps", "Production AI"]
+      }
+    ]
+  },
+
+  "presentations": [
+    {
+      "title": "UAV-DL-Based Computer Vision Framework for Construction Worker Pose Estimation",
+      "event": "CIB World Building Congress 2025",
+      "type": "Conference Paper Presentation",
+      "location": "Copenhagen, Denmark",
+      "date": "2025-06",
+      "award": "Best Paper Award",
+      "audience": "500+ international researchers"
+    },
+    {
+      "title": "Automated Ergonomic Risk Assessment Using AI",
+      "event": "ASC International Conference 2024",
+      "type": "Poster Presentation",
+      "location": "USA",
+      "date": "2024-04",
+      "award": "Best Poster Award",
+      "audience": "300+ construction professionals and academics"
+    },
+    {
+      "title": "Computer Vision for Safety Management in Steel Industry",
+      "event": "AIST AISTech 2023",
+      "type": "Technical Presentation",
+      "location": "Detroit, MI",
+      "date": "2023-05",
+      "award": "Certificate of Recognition",
+      "audience": "Industrial safety professionals"
+    }
+  },
+
+  "professionalMemberships": [
+    {
+      "organization": "American Society of Civil Engineers (ASCE)",
+      "role": "Member",
+      "since": "2021",
+      "icon": "fas fa-landmark",
+      "description": "Active member contributing to construction engineering knowledge"
+    },
+    {
+      "organization": "Project Management Institute (PMI)",
+      "role": "Certified Member",
+      "since": "2023",
+      "icon": "fas fa-project-diagram",
+      "description": "PMP certified professional member"
+    },
+    {
+      "organization": "Association of Steel Industry (AIST)",
+      "role": "Associate Member",
+      "since": "2022",
+      "icon": "fas fa-industry",
+      "description": "Contributing research on AI applications in steel manufacturing"
+    }
+  },
+
+  "academicService": [
+    {
+      "role": "Peer Reviewer",
+      "organization": "Multiple Journals",
+      "description": "Reviewed manuscripts for peer-reviewed journals in construction engineering and AI",
+      "years": "2023-Present",
+      "count": "10+ papers reviewed"
+    },
+    {
+      "role": "Conference Reviewer",
+      "organization": "International Construction Conferences",
+      "description": "Reviewed abstracts and papers for major construction conferences",
+      "years": "2023-Present",
+      "count": "15+ papers reviewed"
+    },
+    {
+      "role": "Graduate Student Mentor",
+      "organization": "UTSA",
+      "description": "Mentored junior graduate students in research methodology and AI applications",
+      "years": "2022-2025",
+      "count": "5+ students mentored"
+    }
+  ],
+
+  "keyAchievements": [
+    {
+      "category": "Research Excellence",
+      "icon": "fas fa-medal",
+      "achievements": [
+        "Graduated with perfect 4.0 GPA from PhD program",
+        "Published 10+ peer-reviewed papers in top-tier venues",
+        "Won 2 Best Paper/Poster Awards at international conferences",
+        "Developed 2 production-ready AI systems for construction safety",
+        "Research cited 50+ times by international scholars"
+      ]
+    },
+    {
+      "category": "Project Management",
+      "icon": "fas fa-tasks",
+      "achievements": [
+        "Led $1M+ construction projects from inception to completion",
+        "Achieved zero-casualty safety record across all managed projects",
+        "Managed teams of 5+ engineers and 50+ construction workers",
+        "Reduced safety incidents by 40% through innovative protocols",
+        "Delivered projects within budget and ahead of schedule"
+      ]
+    },
+    {
+      "category": "Technical Innovation",
+      "icon": "fas fa-lightbulb",
+      "achievements": [
+        "Developed SOFIS system with 95% accuracy in pose estimation",
+        "Created ECERI tool adopted by multiple construction firms",
+        "Published open-source AI frameworks with 100+ GitHub stars",
+        "Pioneered UAV-based safety monitoring techniques",
+        "Integrated AI with traditional construction management"
+      ]
+    },
+    {
+      "category": "Leadership & Impact",
+      "icon": "fas fa-users-cog",
+      "achievements": [
+        "Selected as Klesse Emerging Leader (top 10 of 1000+ candidates)",
+        "Two-time ASCE UESI Scholarship recipient",
+        "Mentored 5+ graduate students in research",
+        "Presented research to 1000+ professionals at conferences",
+        "Collaborated with industry partners on real-world implementations"
+      ]
+    }
+  },
+
+  "testimonials": [
+    {
+      "name": "Dr. Ibukun Gabriel Awolusi",
+      "title": "PhD Advisor & Associate Professor",
+      "organization": "UTSA",
+      "photo": "",
+      "quote": "Roy is an exceptional researcher who combines technical depth with practical application. His work in AI-driven construction safety has the potential to transform the industry.",
+      "relationship": "PhD Advisor"
+    },
+    {
+      "name": "[Industry Contact Name]",
+      "title": "Construction Manager",
+      "organization": "[Company Name]",
+      "photo": "",
+      "quote": "Roy's expertise in project management and safety engineering was instrumental in achieving our zero-incident record on a complex $1M+ project.",
+      "relationship": "Former Supervisor"
+    }
+  ],
+
+  "toolsAndTechnologies": {
+    "programmingLanguages": [
+      {"name": "Python", "level": 95, "experience": "5+ years"},
+      {"name": "R", "level": 75, "experience": "3 years"},
+      {"name": "SQL", "level": 80, "experience": "4 years"},
+      {"name": "JavaScript", "level": 70, "experience": "2 years"},
+      {"name": "MATLAB", "level": 65, "experience": "2 years"}
+    ],
+    "aiFrameworks": [
+      {"name": "TensorFlow", "level": 90, "experience": "4 years"},
+      {"name": "PyTorch", "level": 85, "experience": "3 years"},
+      {"name": "OpenCV", "level": 90, "experience": "4 years"},
+      {"name": "Scikit-learn", "level": 90, "experience": "5 years"},
+      {"name": "Keras", "level": 85, "experience": "3 years"}
+    ],
+    "constructionSoftware": [
+      {"name": "AutoCAD", "level": 80, "experience": "6 years"},
+      {"name": "Revit (BIM)", "level": 75, "experience": "4 years"},
+      {"name": "MS Project", "level": 85, "experience": "5 years"},
+      {"name": "Primavera P6", "level": 70, "experience": "3 years"},
+      {"name": "SAP2000", "level": 75, "experience": "4 years"}
+    ],
+    "dataAndCloud": [
+      {"name": "Git/GitHub", "level": 85, "experience": "5 years"},
+      {"name": "Docker", "level": 70, "experience": "2 years"},
+      {"name": "AWS", "level": 65, "experience": "2 years"},
+      {"name": "Jupyter", "level": 90, "experience": "5 years"},
+      {"name": "Pandas/NumPy", "level": 90, "experience": "5 years"}
+    ]
+  },
+
+  "mediaAndPress": [
+    {
+      "title": "UTSA Researcher Wins Best Paper Award for Construction Safety Innovation",
+      "outlet": "UTSA Today",
+      "date": "2025-06",
+      "url": "#",
+      "type": "University News"
+    },
+    {
+      "title": "AI-Powered Safety Systems Transforming Construction Industry",
+      "outlet": "Engineering News",
+      "date": "2024-08",
+      "url": "#",
+      "type": "Industry Publication"
+    }
+  ],
+
+  "industryValue": {
+    "forRecruiters": {
+      "summary": "A versatile professional combining technical AI/ML expertise with hands-on construction management experience. Proven track record of delivering measurable results: zero-casualty projects, 40% reduction in safety incidents, and $1M+ project leadership. Ready to drive innovation and safety improvements from day one.",
+      "keyStrengths": [
+        "Technical Excellence: PhD in AI/Computer Vision with production-ready implementations",
+        "Project Leadership: PMP certified with $1M+ project management experience",
+        "Business Impact: Quantifiable results in cost reduction and safety improvement",
+        "Cross-functional: Bridges engineering, technology, and management seamlessly",
+        "Industry Ready: 7+ years combining academic research with practical application"
+      ],
+      "idealRoles": [
+        "AI/ML Engineer (Construction/Safety domain)",
+        "Project Manager (Technology/Construction)",
+        "Safety Engineering Manager",
+        "Research Scientist (Applied AI)",
+        "Technical Consultant (Construction Technology)",
+        "Product Manager (Construction Tech)",
+        "Data Scientist (Infrastructure/Construction)"
+      ]
+    },
+    "forAcademia": {
+      "summary": "An accomplished early-career researcher with perfect 4.0 PhD, 10+ publications, multiple best paper awards, and proven ability to secure recognition and funding. Strong teaching potential with demonstrated mentoring success. Research agenda aligns with national priorities in infrastructure safety and AI applications.",
+      "keyStrengths": [
+        "Research Productivity: 10+ publications in 4 years with strong citation impact",
+        "Recognition: Multiple best paper/poster awards at competitive venues",
+        "Funding Potential: Track record of competitive scholarship awards",
+        "Interdisciplinary: Bridges civil engineering, computer science, and safety",
+        "Teaching Ready: Mentoring experience and strong communication skills"
+      ],
+      "idealPositions": [
+        "Assistant Professor (Civil/Construction Engineering)",
+        "Assistant Professor (Computer Science - Applied AI)",
+        "Postdoctoral Researcher (Construction Safety/AI)",
+        "Research Scientist (Government Labs/Industry Research)",
+        "Lecturer/Senior Lecturer (Construction Management)"
+      ]
+    }
   }
 }

@@ -4,13 +4,33 @@ A modern, professional portfolio website showcasing expertise in AI-driven const
 
 ## 🌟 Features
 
+### Design & UX
 - **Modern Design**: Clean, professional interface with smooth animations
-- **Dark/Light Mode**: Toggle between themes with persistent preference
+- **Dark/Light Mode**: Toggle between themes with persistent preference (bottom-right button)
 - **Responsive**: Fully optimized for desktop, tablet, and mobile devices
-- **Data-Driven**: All content managed through JSON for easy updates
-- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Animated Counters**: Stats animate as you scroll
+- **Smooth Transitions**: Professional fade-in effects throughout
+
+### Content Sections
+- **Research Impact Dashboard**: Showcase research metrics and highlights
+- **Key Achievements**: Categorized accomplishments with measurable results
+- **Professional Certifications**: Prominent display of credentials
+- **Tools & Technologies**: Visual proficiency indicators for all technical skills
+- **Professional Memberships**: Academic and industry affiliations
+- **Testimonials**: Recommendations from supervisors and collaborators
+- **Complete Experience Timeline**: Detailed work history with achievements
+
+### Technical
+- **Data-Driven**: All content managed through single JSON file
+- **Easy Updates**: Update content without touching code (see [CONTENT_UPDATE_GUIDE.md](CONTENT_UPDATE_GUIDE.md))
+- **SEO Optimized**: Proper meta tags, Open Graph, and Twitter Cards
 - **Performance**: Fast loading with modular architecture
 - **Accessibility**: ARIA labels and semantic HTML structure
+
+### Professional Appeal
+- **Industry-Focused**: Sections highlighting business impact and ROI
+- **Academia-Focused**: Research metrics, publications, and academic service
+- **Dual-Purpose**: Optimized for both corporate recruiters and academic search committees
 
 ## 📁 Project Structure
 
@@ -77,6 +97,8 @@ delubobo.github.io/
 3. Open your browser to `http://localhost:8000`
 
 ### Updating Content
+
+**📖 See [CONTENT_UPDATE_GUIDE.md](CONTENT_UPDATE_GUIDE.md) for detailed instructions!**
 
 All content is managed through `assets/data/portfolio.json`. Simply edit this file to update:
 
