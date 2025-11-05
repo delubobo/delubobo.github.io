@@ -1,0 +1,502 @@
+{
+  "profile": {
+    "name": "Roy Uzoma Lan",
+    "firstName": "Roy",
+    "lastName": "Lan",
+    "titles": "Ph.D., PMP",
+    "tagline": "AI-Driven Safety Engineer | Construction Management Expert",
+    "bio": "Certified professional with a Ph.D. in Civil Engineering from the University of Texas at San Antonio (GPA: 4.00/4.00) and a Master's in Construction Management with Distinction from the University of Lagos. I specialize in leveraging Artificial Intelligence and Computer Vision to enhance safety in construction and high-risk industrial environments.",
+    "longBio": "With PMP certification and extensive experience leading large-scale projects, I bring a unique combination of technical expertise and practical leadership. My background includes project management, structural engineering, and safety engineering, honed through roles spanning over 7+ years. My career is marked by prestigious awards, scholarships, and recognition for excellence in research and practice. As a mentor and educator, I have guided students and professionals while collaborating with leading academics and industry experts.",
+    "imageUrl": "assets/images/profile/Profile_Picture.jpeg",
+    "cvUrl": "assets/documents/cv/Roy_Lan_CV.pdf",
+    "location": "San Antonio, Texas, USA",
+    "yearsOfExperience": "7+",
+    "researchInterests": [
+      "Artificial Intelligence in Construction",
+      "Computer Vision for Safety Management",
+      "Ergonomic Risk Assessment",
+      "Construction Project Management",
+      "Deep Learning Applications",
+      "Workplace Safety Analytics"
+    ]
+  },
+
+  "contact": {
+    "email": "roylanuzoma@gmail.com",
+    "phone": "(726) 219-1465",
+    "linkedin": "https://linkedin.com/in/roylanuzoma",
+    "github": "https://github.com/delubobo",
+    "scholar": "https://scholar.google.com",
+    "researchgate": "https://www.researchgate.net",
+    "orcid": "https://orcid.org"
+  },
+
+  "stats": [
+    {
+      "value": 4.0,
+      "label": "PhD CGPA",
+      "suffix": "",
+      "icon": "fas fa-graduation-cap"
+    },
+    {
+      "value": 10,
+      "label": "Publications",
+      "suffix": "+",
+      "icon": "fas fa-book"
+    },
+    {
+      "value": 8,
+      "label": "Major Awards",
+      "suffix": "+",
+      "icon": "fas fa-trophy"
+    },
+    {
+      "value": 1,
+      "label": "Projects Led",
+      "suffix": "M+",
+      "icon": "fas fa-project-diagram"
+    }
+  ],
+
+  "skills": {
+    "technical": [
+      {
+        "category": "Programming & AI",
+        "skills": [
+          { "name": "Python", "level": 95, "icon": "fab fa-python" },
+          { "name": "Machine Learning", "level": 90, "icon": "fas fa-brain" },
+          { "name": "Deep Learning", "level": 90, "icon": "fas fa-robot" },
+          { "name": "Computer Vision", "level": 95, "icon": "fas fa-eye" },
+          { "name": "TensorFlow/PyTorch", "level": 85, "icon": "fas fa-network-wired" },
+          { "name": "OpenCV", "level": 90, "icon": "fas fa-camera" }
+        ]
+      },
+      {
+        "category": "Data Science & Analysis",
+        "skills": [
+          { "name": "Data Analysis", "level": 90, "icon": "fas fa-chart-line" },
+          { "name": "Statistical Modeling", "level": 85, "icon": "fas fa-chart-bar" },
+          { "name": "R Programming", "level": 75, "icon": "fas fa-calculator" },
+          { "name": "SQL", "level": 80, "icon": "fas fa-database" },
+          { "name": "Pandas/NumPy", "level": 90, "icon": "fas fa-table" }
+        ]
+      },
+      {
+        "category": "Construction & Engineering",
+        "skills": [
+          { "name": "Construction Management", "level": 95, "icon": "fas fa-hard-hat" },
+          { "name": "Safety Engineering", "level": 95, "icon": "fas fa-shield-alt" },
+          { "name": "Structural Design", "level": 85, "icon": "fas fa-building" },
+          { "name": "AutoCAD", "level": 80, "icon": "fas fa-drafting-compass" },
+          { "name": "BIM/Revit", "level": 75, "icon": "fas fa-cube" },
+          { "name": "Project Scheduling", "level": 90, "icon": "fas fa-calendar-alt" }
+        ]
+      },
+      {
+        "category": "Tools & Technologies",
+        "skills": [
+          { "name": "Git/GitHub", "level": 85, "icon": "fab fa-github" },
+          { "name": "Docker", "level": 70, "icon": "fab fa-docker" },
+          { "name": "Linux/Unix", "level": 80, "icon": "fab fa-linux" },
+          { "name": "Jupyter Notebooks", "level": 90, "icon": "fas fa-book-open" },
+          { "name": "MS Project", "level": 85, "icon": "fas fa-tasks" }
+        ]
+      }
+    ],
+    "professional": [
+      { "name": "Project Management", "icon": "fas fa-tasks", "description": "PMP certified with experience managing $1M+ projects and multi-engineer teams" },
+      { "name": "Research & Development", "icon": "fas fa-flask", "description": "Published researcher with 10+ peer-reviewed publications" },
+      { "name": "Leadership", "icon": "fas fa-users", "description": "Led teams of 5+ engineers, mentored graduate students" },
+      { "name": "Technical Writing", "icon": "fas fa-pen", "description": "Authored journal articles, conference papers, and technical reports" },
+      { "name": "Public Speaking", "icon": "fas fa-microphone", "description": "Presented at international conferences, won best paper/poster awards" },
+      { "name": "Risk Assessment", "icon": "fas fa-exclamation-triangle", "description": "Developed novel ergonomic risk assessment frameworks" }
+    ],
+    "certifications": [
+      { "name": "Project Management Professional (PMP)", "issuer": "PMI", "year": "2023", "icon": "fas fa-certificate" },
+      { "name": "OSHA 30-Hour Construction", "issuer": "OSHA", "year": "2022", "icon": "fas fa-hard-hat" }
+    ]
+  },
+
+  "experience": [
+    {
+      "position": "Doctoral Researcher",
+      "company": "The University of Texas at San Antonio",
+      "location": "San Antonio, TX",
+      "startDate": "2021-08",
+      "endDate": "2025-08",
+      "current": false,
+      "type": "Academic",
+      "description": "Conducted cutting-edge research in AI-driven construction safety, developing computer vision systems for worker pose estimation and ergonomic risk assessment.",
+      "achievements": [
+        "Developed SOFIS system for automated ergonomic risk assessment with 95% accuracy",
+        "Published 10+ peer-reviewed papers in top journals and conferences",
+        "Won Best Paper Award at CIB World Building Congress 2025",
+        "Secured multiple competitive scholarships and awards",
+        "Graduated with perfect 4.0 GPA"
+      ],
+      "technologies": ["Python", "TensorFlow", "Computer Vision", "Deep Learning", "UAV Technology"]
+    },
+    {
+      "position": "Project Engineer & Safety Manager",
+      "company": "Construction Industry",
+      "location": "Nigeria",
+      "startDate": "2015-07",
+      "endDate": "2021-07",
+      "current": false,
+      "type": "Industry",
+      "description": "Led construction projects worth over $1M, managing multi-disciplinary teams while ensuring zero-casualty safety records.",
+      "achievements": [
+        "Successfully managed $1M+ construction projects from inception to completion",
+        "Achieved zero-casualty safety record across all projects",
+        "Led teams of 5+ engineers and 50+ construction workers",
+        "Implemented innovative safety protocols reducing incidents by 40%",
+        "Coordinated with stakeholders including clients, contractors, and regulatory bodies"
+      ],
+      "technologies": ["Project Management", "HSE Management", "AutoCAD", "MS Project", "Structural Analysis"]
+    },
+    {
+      "position": "Graduate Research Assistant",
+      "company": "University of Lagos",
+      "location": "Lagos, Nigeria",
+      "startDate": "2019-09",
+      "endDate": "2021-11",
+      "current": false,
+      "type": "Academic",
+      "description": "Conducted research on stakeholder influence in construction projects, graduated as Best Student with CGPA 4.79/5.00.",
+      "achievements": [
+        "Graduated as Best Graduating Student (CGPA: 4.79/5.00)",
+        "Developed empirical models for construction project outcomes",
+        "Published thesis on stakeholder influence dynamics",
+        "Mentored undergraduate students in research methodology"
+      ],
+      "technologies": ["Statistical Modeling", "SPSS", "Research Design", "Structural Equation Modeling"]
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Doctor of Philosophy, Civil Engineering",
+      "institution": "The University of Texas at San Antonio",
+      "location": "San Antonio, TX, USA",
+      "date": "August 2025",
+      "startYear": "2021",
+      "endYear": "2025",
+      "gpa": "4.00/4.00",
+      "distinction": "Perfect GPA",
+      "details": [
+        {
+          "type": "badge",
+          "text": "GPA: 4.00/4.00"
+        },
+        {
+          "type": "text",
+          "text": "<strong>Dissertation:</strong> Advancing Workplace Safety Through Intelligent Monitoring: Applications of Artificial Intelligence and Computer Vision in High-Risk Industrial Environments"
+        },
+        {
+          "type": "text",
+          "text": "<strong>Advisor:</strong> Ibukun Gabriel Awolusi, Ph.D."
+        }
+      ],
+      "courses": [
+        "Advanced Machine Learning",
+        "Computer Vision",
+        "Construction Safety Management",
+        "Research Methods",
+        "Advanced Statistics"
+      ]
+    },
+    {
+      "degree": "Master of Science, Construction Management",
+      "institution": "University of Lagos",
+      "location": "Lagos, Nigeria",
+      "date": "November 2021",
+      "startYear": "2019",
+      "endYear": "2021",
+      "gpa": "4.79/5.00",
+      "distinction": "Best Graduating Student",
+      "details": [
+        {
+          "type": "badge",
+          "text": "CGPA: 4.79/5.00"
+        },
+        {
+          "type": "badge",
+          "text": "Best Graduating Student"
+        },
+        {
+          "type": "text",
+          "text": "<strong>Thesis:</strong> Empirical modeling of causal interactions and stakeholder influence in construction project outcomes"
+        }
+      ]
+    },
+    {
+      "degree": "Bachelor of Science, Civil Engineering",
+      "institution": "Covenant University",
+      "location": "Ota, Nigeria",
+      "date": "June 2015",
+      "startYear": "2011",
+      "endYear": "2015",
+      "gpa": "",
+      "distinction": "",
+      "details": []
+    }
+  ],
+
+  "awards": [
+    {
+      "icon": "fas fa-trophy",
+      "title": "Best Paper Award",
+      "source": "CIB World Building Congress 2025",
+      "year": "2025",
+      "description": "Won in highly competitive category for \"UAV-DL-Based Computer Vision Framework for Construction Worker Pose Estimation\"",
+      "category": "Research"
+    },
+    {
+      "icon": "fas fa-award",
+      "title": "Best Poster Award",
+      "source": "60th ASC International Conference 2024",
+      "year": "2024",
+      "description": "First place among international submissions, recognizing innovation and impact in construction research",
+      "category": "Research"
+    },
+    {
+      "icon": "fas fa-graduation-cap",
+      "title": "ASCE UESI Student Scholarship",
+      "source": "American Society of Civil Engineers",
+      "year": "2023, 2025",
+      "description": "Two-time recipient (2023, 2025). Competitive scholarship supporting student leaders with conference funding and admission",
+      "category": "Scholarship"
+    },
+    {
+      "icon": "fas fa-star",
+      "title": "Klesse Emerging Leader",
+      "source": "UTSA College of Engineering 2024-2025",
+      "year": "2024",
+      "description": "Selected as top 10 from over 1,000 candidates for leadership and academic excellence",
+      "category": "Leadership"
+    }
+  ],
+
+  "publications": {
+    "fullListUrl": "assets/documents/publications/Publications_List.pdf",
+    "summary": {
+      "totalPublications": 10,
+      "journalArticles": 3,
+      "conferenceProceedings": 7,
+      "citations": 50,
+      "hIndex": 4
+    },
+    "journals": [
+      {
+        "authors": "<strong>Lan, R.</strong>, Awolusi, I., and Cai, J.",
+        "year": "2024",
+        "title": "Computer Vision for Safety Management in the Steel Industry",
+        "journal": "AI",
+        "volume": "5",
+        "issue": "3",
+        "pages": "1192-1215",
+        "doi": "10.3390/ai5030059",
+        "citations": 15,
+        "badge": null
+      },
+      {
+        "authors": "<strong>Lan, R.</strong>, Adenuga, O., and Awolusi, I.",
+        "year": "2025",
+        "title": "Professionals' Perspectives on the Factors Causing Construction Project Failures in Developing Countries",
+        "journal": "International Journal of Construction Management",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "doi": "",
+        "citations": 0,
+        "badge": "In Press"
+      },
+      {
+        "authors": "<strong>Lan, R.</strong> and Awolusi, I.",
+        "year": "2025",
+        "title": "The Elevated Construction Ergonomic Risk Index (ECERI): Contextualizing REBA for Height-Exposed Tasks",
+        "journal": "Journal of Safety Research",
+        "volume": "",
+        "issue": "",
+        "pages": "",
+        "doi": "",
+        "citations": 0,
+        "badge": "Under Review"
+      }
+    ],
+    "conferences": [
+      {
+        "authors": "<strong>Lan, R.</strong> and Awolusi, I.",
+        "year": "2025",
+        "title": "UAV-DL-Based Computer Vision Framework for Construction Worker Pose Estimation",
+        "conference": "CIB World Building Congress",
+        "location": "Copenhagen, Denmark",
+        "pages": "",
+        "badge": "Best Paper Award"
+      },
+      {
+        "authors": "<strong>Lan, R.</strong>, Awolusi, I., and Cai, J.",
+        "year": "2023",
+        "title": "Computer Vision for Pipeline Monitoring Using UAVs and Deep Learning",
+        "conference": "ASCE Pipelines 2023",
+        "location": "San Antonio, TX",
+        "pages": "181-191",
+        "badge": null
+      },
+      {
+        "authors": "<strong>Lan, R.</strong>, Awolusi, I., and Cai, J.",
+        "year": "2023",
+        "title": "Digital computer vision for safety management in Steel manufacturing",
+        "conference": "AIST AISTech 2023",
+        "location": "Detroit, MI",
+        "pages": "31-42",
+        "badge": "Certificate of Recognition"
+      }
+    ]
+  },
+
+  "projects": [
+    {
+      "id": "sofis",
+      "icon": "fas fa-brain",
+      "title": "SOFIS System",
+      "subtitle": "Self-Organizing Fuzzy Inference System",
+      "category": "AI/ML Application",
+      "status": "Production Ready",
+      "description": "Production-ready Python implementation for automated ergonomic risk assessment with uncertainty quantification, adaptive learning, and task specialization.",
+      "longDescription": "The SOFIS (Self-Organizing Fuzzy Inference System) is a sophisticated AI-powered framework designed to automatically assess ergonomic risks in construction environments. The system combines advanced pose estimation algorithms with adaptive fuzzy logic to provide real-time risk assessment with uncertainty quantification. It features Monte Carlo simulation for robust risk predictions and can specialize for different task types through self-organizing learning mechanisms.",
+      "problem": "Traditional ergonomic assessment methods are time-consuming, subjective, and require expert knowledge. Construction workers face high ergonomic risks, but manual assessment cannot scale to monitor all workers continuously.",
+      "solution": "SOFIS automates the entire process using computer vision and AI, providing continuous monitoring, objective assessments, and uncertainty-aware predictions that help prioritize interventions.",
+      "impact": [
+        "95% accuracy in pose estimation compared to expert assessments",
+        "Real-time processing enabling continuous worker monitoring",
+        "Reduced assessment time from hours to seconds",
+        "Uncertainty quantification helps prioritize high-confidence interventions"
+      ],
+      "tags": ["AI-powered pose estimation", "Monte Carlo uncertainty", "Adaptive fuzzy logic", "Real-time assessment"],
+      "technologies": ["Python", "TensorFlow", "OpenCV", "Scikit-Fuzzy", "NumPy"],
+      "features": [
+        "Automated pose estimation from images/video",
+        "Adaptive fuzzy inference for risk assessment",
+        "Monte Carlo uncertainty quantification",
+        "Task-specific specialization",
+        "Real-time processing capabilities",
+        "Comprehensive documentation and API"
+      ],
+      "imageUrl": "assets/images/projects/sofis-demo.png",
+      "links": [
+        {
+          "type": "primary",
+          "text": "View Code",
+          "icon": "fab fa-github",
+          "url": "https://github.com/delubobo/sofis-system"
+        },
+        {
+          "type": "secondary",
+          "text": "Documentation",
+          "icon": "fas fa-book",
+          "url": "assets/documents/publications/SOFIS_Documentation.pdf",
+          "download": true
+        }
+      ]
+    },
+    {
+      "id": "eceri",
+      "icon": "fas fa-calculator",
+      "title": "ECERI Risk Calculator",
+      "subtitle": "Elevated Construction Ergonomic Risk Index",
+      "category": "Web Application",
+      "status": "Live Demo Available",
+      "description": "Interactive web-based tool for ergonomic risk evaluation in height-exposed construction tasks, featuring financial impact analysis and real-time risk assessment.",
+      "longDescription": "The ECERI (Elevated Construction Ergonomic Risk Index) is an enhanced ergonomic assessment tool specifically designed for construction workers performing tasks at height. Building upon the traditional REBA (Rapid Entire Body Assessment) framework, ECERI incorporates height-specific risk factors and financial impact calculations to provide comprehensive risk evaluation and cost-benefit analysis for safety interventions.",
+      "problem": "Standard ergonomic assessment tools like REBA do not account for the unique risks associated with working at height in construction. Decision-makers lack tools to quantify the financial impact of ergonomic interventions.",
+      "solution": "ECERI provides a context-aware assessment framework that incorporates height exposure into risk calculations and translates risk scores into financial metrics, enabling data-driven safety investment decisions.",
+      "impact": [
+        "More accurate risk assessment for height-exposed tasks",
+        "Financial justification for safety interventions",
+        "Used in multiple construction projects for safety planning",
+        "Enables proactive intervention before injuries occur"
+      ],
+      "tags": ["Context-aware REBA", "Financial impact analysis", "Real-time assessment", "Web-based tool"],
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Chart.js", "Responsive Design"],
+      "features": [
+        "Interactive risk assessment interface",
+        "Height-specific risk modifiers",
+        "Financial impact calculator",
+        "Visual risk reporting with charts",
+        "PDF report generation",
+        "Mobile-responsive design"
+      ],
+      "imageUrl": "assets/images/projects/eceri-demo.png",
+      "links": [
+        {
+          "type": "primary",
+          "text": "Live Demo",
+          "icon": "fas fa-external-link-alt",
+          "url": "https://delubobo.github.io/eceri-risk_cost_calculator_/"
+        },
+        {
+          "type": "secondary",
+          "text": "Research Paper",
+          "icon": "fas fa-file-pdf",
+          "url": "assets/documents/publications/ECERI_Paper.pdf",
+          "download": true
+        }
+      ]
+    }
+  ],
+
+  "research": {
+    "overview": "My research focuses on advancing workplace safety in high-risk industrial environments through the application of Artificial Intelligence and Computer Vision. I develop intelligent monitoring systems that can detect hazards, assess ergonomic risks, and prevent accidents before they occur.",
+    "interests": [
+      {
+        "title": "AI-Driven Safety Management",
+        "icon": "fas fa-shield-alt",
+        "description": "Developing intelligent systems that leverage computer vision and deep learning to monitor construction sites, detect safety violations, and predict potential hazards in real-time."
+      },
+      {
+        "title": "Ergonomic Risk Assessment",
+        "icon": "fas fa-user-md",
+        "description": "Creating automated frameworks for assessing worker ergonomics using pose estimation and biomechanical modeling, with focus on height-exposed construction tasks."
+      },
+      {
+        "title": "Computer Vision Applications",
+        "icon": "fas fa-eye",
+        "description": "Applying state-of-the-art computer vision techniques including object detection, pose estimation, and scene understanding to solve real-world construction challenges."
+      },
+      {
+        "title": "UAV Technology in Construction",
+        "icon": "fas fa-helicopter",
+        "description": "Utilizing unmanned aerial vehicles equipped with cameras and sensors for automated site inspection, progress monitoring, and safety surveillance."
+      }
+    ],
+    "currentProjects": [
+      "Deep learning framework for multi-person pose estimation in construction environments",
+      "Automated PPE detection and compliance monitoring system",
+      "Predictive models for construction accident prevention"
+    ],
+    "futureDirections": [
+      "Real-time safety monitoring using edge AI devices",
+      "Integration of wearable sensors with computer vision for comprehensive safety assessment",
+      "Explainable AI for safety management decision support"
+    ],
+    "collaborators": [
+      {
+        "name": "Dr. Ibukun Gabriel Awolusi",
+        "role": "PhD Advisor",
+        "institution": "UTSA",
+        "url": ""
+      }
+    ]
+  },
+
+  "teaching": {
+    "courses": [],
+    "mentoring": [
+      "Mentored graduate students in research methodology and AI applications",
+      "Supervised undergraduate research projects in construction safety",
+      "Provided guidance to junior engineers on project management practices"
+    ],
+    "workshops": []
+  }
+}

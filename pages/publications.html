@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete list of publications by Roy Uzoma Lan, Ph.D. including peer-reviewed journals and conference proceedings.">
+    <title>Publications | Roy Uzoma Lan, Ph.D., PMP</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/themes.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--construction-blue);
+            background: transparent;
+            color: var(--construction-blue);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--construction-blue);
+            color: white;
+        }
+
+        .publication-card {
+            background: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            border-left: 4px solid var(--construction-orange);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .publication-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(10px);
+        }
+
+        .pub-year {
+            display: inline-block;
+            background: var(--construction-orange);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pub-title {
+            font-size: var(--font-size-lg);
+            color: var(--construction-blue);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pub-authors {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pub-venue {
+            color: var(--text-tertiary);
+            font-style: italic;
+            font-size: var(--font-size-sm);
+        }
+
+        .pub-stats {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .pub-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Roy Lan</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link active">Publications</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section" style="min-height: 50vh;">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="mb-3">Publications</h1>
+                <p style="font-size: var(--font-size-xl); opacity: 0.9;">
+                    Peer-Reviewed Research Contributions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publication Stats -->
+    <section class="section" style="background: var(--bg-tertiary); padding: 3rem var(--spacing-lg);">
+        <div class="container">
+            <div class="grid grid-4 gap-lg" id="pub-stats"></div>
+        </div>
+    </section>
+
+    <!-- Publications List -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">All Publications</h2>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Publications</button>
+                <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                <button class="filter-btn" data-filter="conference">Conference Papers</button>
+            </div>
+
+            <!-- Download Button -->
+            <div class="text-center mb-4">
+                <a href="../assets/documents/publications/Publications_List.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-file-pdf"></i> Download Complete List (PDF)
+                </a>
+            </div>
+
+            <!-- Publications Container -->
+            <div id="publications-container" style="max-width: 900px; margin: 0 auto;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom text-center">
+                <div class="social-links" id="footer-socials"></div>
+                <p>&copy; <span id="copyright-year"></span> Roy Uzoma Lan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/data-loader.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        (async function() {
+            const data = await window.portfolioDataLoader.loadData();
+            window.portfolioData = data;
+
+            const { publications } = data;
+            const { summary, journals, conferences } = publications;
+
+            // Render statistics
+            const statsContainer = document.getElementById('pub-stats');
+            const stats = [
+                { icon: 'fas fa-book', value: summary.totalPublications, label: 'Total Publications' },
+                { icon: 'fas fa-newspaper', value: summary.journalArticles, label: 'Journal Articles' },
+                { icon: 'fas fa-file-alt', value: summary.conferenceProceedings, label: 'Conference Papers' },
+                { icon: 'fas fa-quote-right', value: summary.citations + '+', label: 'Citations' }
+            ];
+
+            statsContainer.innerHTML = stats.map(stat => `
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="${stat.icon}"></i></div>
+                    <div class="stat-number">${stat.value}</div>
+                    <p class="stat-label">${stat.label}</p>
+                </div>
+            `).join('');
+
+            // Combine and sort all publications
+            const allPublications = [
+                ...journals.map(pub => ({ ...pub, type: 'journal' })),
+                ...conferences.map(pub => ({ ...pub, type: 'conference' }))
+            ].sort((a, b) => b.year - a.year);
+
+            // Render publications
+            function renderPublications(filter = 'all') {
+                const container = document.getElementById('publications-container');
+                const filteredPubs = filter === 'all'
+                    ? allPublications
+                    : allPublications.filter(pub => pub.type === filter);
+
+                container.innerHTML = filteredPubs.map(pub => {
+                    const venue = pub.type === 'journal'
+                        ? `<em>${pub.journal}</em>${pub.volume ? `, ${pub.volume}` : ''}${pub.issue ? `(${pub.issue})` : ''}${pub.pages ? `, ${pub.pages}` : ''}.`
+                        : `<em>${pub.conference}</em>${pub.location ? `, ${pub.location}` : ''}${pub.pages ? `, ${pub.pages}` : ''}.`;
+
+                    return `
+                        <div class="publication-card fade-in-up">
+                            <div class="pub-year">${pub.year}</div>
+                            ${pub.badge ? `<span class="badge badge-secondary">${pub.badge}</span>` : ''}
+                            <h3 class="pub-title">${pub.title}</h3>
+                            <p class="pub-authors">${pub.authors}</p>
+                            <p class="pub-venue">${venue}</p>
+                            ${pub.citations !== undefined ? `
+                                <div class="pub-stats">
+                                    <div class="pub-stat">
+                                        <i class="fas fa-quote-right"></i>
+                                        <span>${pub.citations} citations</span>
+                                    </div>
+                                    ${pub.doi ? `
+                                        <div class="pub-stat">
+                                            <i class="fas fa-link"></i>
+                                            <a href="https://doi.org/${pub.doi}" target="_blank" style="color: var(--construction-orange);">DOI</a>
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            ` : ''}
+                        </div>
+                    `;
+                }).join('');
+
+                // Trigger animations
+                setTimeout(() => {
+                    document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('is-visible'));
+                }, 100);
+            }
+
+            // Initial render
+            renderPublications();
+
+            // Filter functionality
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    renderPublications(this.getAttribute('data-filter'));
+                });
+            });
+
+            // Render footer
+            const components = new PortfolioComponents(data);
+            components.renderFooter('footer-socials');
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>

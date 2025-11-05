@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed showcase of AI and computer vision projects by Roy Uzoma Lan, Ph.D.">
+    <title>Projects | Roy Uzoma Lan, Ph.D., PMP</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/themes.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .project-detail {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-3xl);
+            margin-bottom: var(--spacing-3xl);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .project-header-section {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+            padding-bottom: var(--spacing-xl);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .project-icon-large {
+            font-size: 4rem;
+            color: var(--construction-orange);
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--success);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+        }
+
+        .project-section {
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .project-section-title {
+            color: var(--construction-blue);
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .feature-item {
+            background: var(--bg-tertiary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            border-left: 3px solid var(--construction-orange);
+        }
+
+        .impact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impact-item {
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .impact-icon {
+            color: var(--success);
+            font-size: var(--font-size-xl);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Roy Lan</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section" style="min-height: 50vh;">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="mb-3">Featured Projects</h1>
+                <p style="font-size: var(--font-size-xl); opacity: 0.9;">
+                    AI-Powered Solutions for Construction Safety
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section section-alt">
+        <div class="container">
+            <div id="projects-container" style="max-width: 1000px; margin: 0 auto;"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom text-center">
+                <div class="social-links" id="footer-socials"></div>
+                <p>&copy; <span id="copyright-year"></span> Roy Uzoma Lan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/data-loader.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        (async function() {
+            const data = await window.portfolioDataLoader.loadData();
+            window.portfolioData = data;
+
+            const { projects } = data;
+
+            // Render projects with full details
+            const container = document.getElementById('projects-container');
+            container.innerHTML = projects.map(project => `
+                <div class="project-detail fade-in-up">
+                    <!-- Header -->
+                    <div class="project-header-section">
+                        <i class="${project.icon} project-icon-large"></i>
+                        <div style="flex: 1;">
+                            <h2 style="color: var(--construction-blue); font-size: var(--font-size-3xl); margin-bottom: var(--spacing-sm);">
+                                ${project.title}
+                            </h2>
+                            <p style="color: var(--text-secondary); font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                                ${project.subtitle}
+                            </p>
+                            <div style="display: flex; gap: var(--spacing-md); align-items: center; flex-wrap: wrap;">
+                                <span class="project-status">${project.status}</span>
+                                <span class="badge badge-outline">${project.category}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="project-section">
+                        <h3 class="project-section-title">
+                            <i class="fas fa-info-circle" style="color: var(--construction-orange);"></i>
+                            Overview
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-lg); line-height: 1.8;">
+                            ${project.longDescription || project.description}
+                        </p>
+                    </div>
+
+                    ${project.problem ? `
+                    <!-- Problem -->
+                    <div class="project-section">
+                        <h3 class="project-section-title">
+                            <i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i>
+                            Problem Statement
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-lg); line-height: 1.8;">
+                            ${project.problem}
+                        </p>
+                    </div>
+                    ` : ''}
+
+                    ${project.solution ? `
+                    <!-- Solution -->
+                    <div class="project-section">
+                        <h3 class="project-section-title">
+                            <i class="fas fa-lightbulb" style="color: var(--success);"></i>
+                            Solution
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-lg); line-height: 1.8;">
+                            ${project.solution}
+                        </p>
+                    </div>
+                    ` : ''}
+
+                    ${project.features ? `
+                    <!-- Features -->
+                    <div class="project-section">
+                        <h3 class="project-section-title">
+                            <i class="fas fa-star" style="color: var(--construction-orange);"></i>
+                            Key Features
+                        </h3>
+                        <div class="features-grid">
+                            ${project.features.map(feature => `
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle" style="color: var(--success); margin-right: var(--spacing-sm);"></i>
+                                    ${feature}
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+
+                    ${project.impact ? `
+                    <!-- Impact -->
+                    <div class="project-section">
+                        <h3 class="project-section-title">
+                            <i class="fas fa-chart-line" style="color: var(--success);"></i>
+                            Impact & Results
+                        </h3>
+                        <ul class="impact-list">
+                            ${project.impact.map(item => `
+                                <li class="impact-item">
+                                    <i class="fas fa-chart-bar impact-icon"></i>
+                                    <span style="color: var(--text-secondary);">${item}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                    ` : ''}
+
+                    <!-- Technologies -->
+                    <div class="project-section">
+                        <h3 class="project-section-title">
+                            <i class="fas fa-code" style="color: var(--construction-orange);"></i>
+                            Technologies Used
+                        </h3>
+                        <div class="project-tags">
+                            ${project.technologies.map(tech => `
+                                <span class="project-tag">${tech}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="project-section">
+                        <div class="flex gap-md" style="flex-wrap: wrap;">
+                            ${project.links.map(link => {
+                                const btnClass = link.type === 'primary' ? 'btn-primary' : 'btn-secondary';
+                                return `
+                                    <a href="${link.url}"
+                                       class="btn ${btnClass} btn-lg"
+                                       ${link.download ? 'download' : 'target="_blank" rel="noopener noreferrer"'}>
+                                        <i class="${link.icon}"></i> ${link.text}
+                                    </a>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render footer
+            const components = new PortfolioComponents(data);
+            components.renderFooter('footer-socials');
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            // Trigger animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('is-visible'));
+            }, 100);
+        })();
+    </script>
+</body>
+</html>
