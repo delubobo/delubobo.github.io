@@ -606,7 +606,7 @@
       "award": "Certificate of Recognition",
       "audience": "Industrial safety professionals"
     }
-  },
+  ],
 
   "professionalMemberships": [
     {
@@ -630,7 +630,7 @@
       "icon": "fas fa-industry",
       "description": "Contributing research on AI applications in steel manufacturing"
     }
-  },
+  ],
 
   "academicService": [
     {
@@ -701,7 +701,7 @@
         "Collaborated with industry partners on real-world implementations"
       ]
     }
-  },
+  ],
 
   "testimonials": [
     {
