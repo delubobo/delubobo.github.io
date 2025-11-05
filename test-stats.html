@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Animation Test</title>
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { padding: 50px 0; }
+        .test-section { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            max-width: 300px;
+            z-index: 9999;
+        }
+        .debug h4 { margin: 0 0 10px 0; color: #4ade80; }
+        .debug p { margin: 5px 0; }
+        .debug .status { color: #fbbf24; }
+        .debug .success { color: #4ade80; }
+        .debug .error { color: #f87171; }
+    </style>
+</head>
+<body>
+    <div class="debug" id="debug-info">
+        <h4>Debug Info</h4>
+        <p>App loaded: <span id="debug-app" class="status">Checking...</span></p>
+        <p>Data loaded: <span id="debug-data" class="status">Checking...</span></p>
+        <p>Observer: <span id="debug-observer" class="status">Checking...</span></p>
+        <p>Stat boxes: <span id="debug-stats" class="status">0</span></p>
+        <p>Refresh called: <span id="debug-refresh" class="status">No</span></p>
+        <p>Animation triggered: <span id="debug-anim" class="status">No</span></p>
+    </div>
+
+    <div class="test-section">
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 50px;">Stats Animation Test</h1>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 50px;">
+                Scroll down to see the stats animate when they come into view
+            </p>
+            <div id="stats-container" class="stats-grid"></div>
+        </div>
+    </div>
+
+    <div class="test-section" style="background: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="text-align: center;">Scroll back up to see if stats animated</h2>
+            <p style="text-align: center; color: var(--text-secondary);">
+                The numbers should have counted up when the stats section entered your viewport
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/data-loader.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Test Script -->
+    <script>
+        function updateDebug(id, text, className = 'status') {
+            const el = document.getElementById(id);
+            if (el) {
+                el.textContent = text;
+                el.className = className;
+            }
+        }
+
+        (async function() {
+            try {
+                console.log('=== Stats Animation Test Starting ===');
+
+                // Check if app loaded
+                if (window.app) {
+                    console.log('✓ App instance found');
+                    updateDebug('debug-app', 'Yes', 'success');
+                } else {
+                    console.error('✗ App instance not found');
+                    updateDebug('debug-app', 'No', 'error');
+                    return;
+                }
+
+                // Check if observer exists
+                if (window.app.observer) {
+                    console.log('✓ Observer exists');
+                    updateDebug('debug-observer', 'Yes', 'success');
+                } else {
+                    console.log('✗ Observer not found');
+                    updateDebug('debug-observer', 'No', 'error');
+                }
+
+                // Load data
+                console.log('Loading portfolio data...');
+                const data = await window.portfolioDataLoader.loadData();
+                console.log('✓ Data loaded:', data);
+                updateDebug('debug-data', 'Yes', 'success');
+
+                // Render stats
+                console.log('Rendering stats...');
+                const components = new PortfolioComponents(data);
+                components.renderStats('stats-container');
+
+                const statBoxes = document.querySelectorAll('.stat-box');
+                console.log(`✓ Rendered ${statBoxes.length} stat boxes`);
+                updateDebug('debug-stats', statBoxes.length, 'success');
+
+                // Log stat-number elements
+                const statNumbers = document.querySelectorAll('.stat-number');
+                console.log(`✓ Found ${statNumbers.length} stat-number elements`);
+                statNumbers.forEach((el, i) => {
+                    console.log(`  Stat ${i}: target=${el.dataset.target}, suffix=${el.dataset.suffix}`);
+                });
+
+                // Refresh observers to watch the newly rendered stats
+                console.log('Calling refreshObservers()...');
+                if (window.app.refreshObservers) {
+                    window.app.refreshObservers();
+                    console.log('✓ refreshObservers() called');
+                    updateDebug('debug-refresh', 'Yes', 'success');
+                } else {
+                    console.error('✗ refreshObservers() not found');
+                    updateDebug('debug-refresh', 'No', 'error');
+                }
+
+                // Add animation listener to first stat
+                const firstStatBox = statBoxes[0];
+                if (firstStatBox) {
+                    const observerCallback = (mutations) => {
+                        mutations.forEach((mutation) => {
+                            if (mutation.attributeName === 'class') {
+                                if (mutation.target.classList.contains('is-visible')) {
+                                    console.log('✓ Animation triggered! Stat box became visible');
+                                    updateDebug('debug-anim', 'Yes', 'success');
+                                }
+                            }
+                        });
+                    };
+                    const mutationObserver = new MutationObserver(observerCallback);
+                    mutationObserver.observe(firstStatBox, { attributes: true });
+                }
+
+                console.log('=== Test Setup Complete ===');
+                console.log('Scroll down to trigger the stats animation');
+
+            } catch (error) {
+                console.error('Test error:', error);
+                updateDebug('debug-data', 'Error: ' + error.message, 'error');
+            }
+        })();
+    </script>
+</body>
+</html>
