@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research interests and contributions of Roy Uzoma Lan, Ph.D. in AI-driven construction safety, computer vision, and ergonomic risk assessment.">
+    <title>Research | Roy Uzoma Lan, Ph.D., PMP</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/themes.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-header">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">Roy Lan</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="research.html" class="nav-link active">Research</a></li>
+                <li><a href="publications.html" class="nav-link">Publications</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section" style="min-height: 50vh;">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="mb-3">Research</h1>
+                <p style="font-size: var(--font-size-xl); opacity: 0.9;">
+                    Advancing Workplace Safety Through Intelligent Monitoring
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Overview -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Research Overview</h2>
+            <div class="card fade-in-up" style="max-width: 900px; margin: 0 auto;">
+                <p id="research-overview" style="font-size: var(--font-size-lg); line-height: 1.8; color: var(--text-secondary);"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Research Interests</h2>
+            <div id="research-interests-container" class="grid grid-2 gap-lg"></div>
+        </div>
+    </section>
+
+    <!-- Current Projects -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Current Research Projects</h2>
+            <div id="current-projects-container" class="grid gap-lg"></div>
+        </div>
+    </section>
+
+    <!-- Future Directions -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Future Research Directions</h2>
+            <div id="future-directions-container" class="grid grid-3 gap-lg"></div>
+        </div>
+    </section>
+
+    <!-- Collaborators -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Research Collaborators</h2>
+            <div id="collaborators-container" class="grid grid-3 gap-lg"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom text-center">
+                <div class="social-links" id="footer-socials"></div>
+                <p>&copy; <span id="copyright-year"></span> Roy Uzoma Lan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/data-loader.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        (async function() {
+            const data = await window.portfolioDataLoader.loadData();
+            window.portfolioData = data;
+
+            const { research } = data;
+
+            // Render overview
+            document.getElementById('research-overview').textContent = research.overview;
+
+            // Render research interests
+            const interestsContainer = document.getElementById('research-interests-container');
+            interestsContainer.innerHTML = research.interests.map(interest => `
+                <div class="card fade-in-up">
+                    <div class="card-icon">
+                        <i class="${interest.icon}"></i>
+                    </div>
+                    <h3 class="card-title">${interest.title}</h3>
+                    <p style="color: var(--text-secondary);">${interest.description}</p>
+                </div>
+            `).join('');
+
+            // Render current projects
+            const currentContainer = document.getElementById('current-projects-container');
+            currentContainer.innerHTML = research.currentProjects.map(project => `
+                <div class="card fade-in-up">
+                    <div class="flex" style="align-items: flex-start; gap: var(--spacing-md);">
+                        <i class="fas fa-flask" style="color: var(--construction-orange); font-size: var(--font-size-2xl);"></i>
+                        <p style="flex: 1; color: var(--text-secondary); font-size: var(--font-size-lg);">${project}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render future directions
+            const futureContainer = document.getElementById('future-directions-container');
+            futureContainer.innerHTML = research.futureDirections.map(direction => `
+                <div class="card fade-in-up" style="text-align: center;">
+                    <i class="fas fa-lightbulb" style="color: var(--construction-orange); font-size: 2.5rem; margin-bottom: var(--spacing-md);"></i>
+                    <p style="color: var(--text-secondary);">${direction}</p>
+                </div>
+            `).join('');
+
+            // Render collaborators
+            const collabContainer = document.getElementById('collaborators-container');
+            collabContainer.innerHTML = research.collaborators.map(collab => `
+                <div class="card fade-in-up text-center">
+                    <i class="fas fa-user-tie" style="color: var(--construction-orange); font-size: 2.5rem; margin-bottom: var(--spacing-md);"></i>
+                    <h4 class="card-title" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">${collab.name}</h4>
+                    <p style="color: var(--construction-orange); font-weight: 600; margin-bottom: var(--spacing-sm);">${collab.role}</p>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">${collab.institution}</p>
+                </div>
+            `).join('');
+
+            // Render footer
+            const components = new PortfolioComponents(data);
+            components.renderFooter('footer-socials');
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            // Trigger animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('is-visible'));
+            }, 100);
+        })();
+    </script>
+</body>
+</html>

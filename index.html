@@ -1,556 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Roy Uzoma Lan, Ph.D., PMP - AI-Driven Safety Engineer in Construction and Infrastructure. PhD from UTSA with expertise in Computer Vision, AI, and Construction Safety.">
-    <meta name="keywords" content="Roy Lan, Construction Safety, AI, Computer Vision, Civil Engineering, UTSA, PhD, PMP">
+    <meta name="keywords" content="Roy Lan, Construction Safety, AI, Computer Vision, Civil Engineering, UTSA, PhD, PMP, Machine Learning, Deep Learning, Ergonomic Risk Assessment">
     <meta name="author" content="Roy Uzoma Lan">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delubobo.github.io/">
+    <meta property="og:title" content="Roy Uzoma Lan, Ph.D., PMP | AI-Driven Safety Engineer">
+    <meta property="og:description" content="Advancing workplace safety through intelligent monitoring in high-risk industrial environments. PhD in Civil Engineering with expertise in Computer Vision and AI.">
+    <meta property="og:image" content="assets/images/profile/Profile_Picture.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://delubobo.github.io/">
+    <meta property="twitter:title" content="Roy Uzoma Lan, Ph.D., PMP | AI-Driven Safety Engineer">
+    <meta property="twitter:description" content="Advancing workplace safety through intelligent monitoring in high-risk industrial environments.">
+    <meta property="twitter:image" content="assets/images/profile/Profile_Picture.jpeg">
+
+    <!-- Title -->
     <title>Roy Uzoma Lan, Ph.D., PMP | Portfolio</title>
-    <!-- FAVICON: Create a 32x32px favicon.ico file and place it in your project's root folder -->
+
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for icons -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+
+    <!-- External Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Analytics Tag -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ0KLP9Y3V"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZJ0KLP9Y3V');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZJ0KLP9Y3V');
     </script>
 
     <style>
-        :root {
-            --construction-blue: #003DA5;
-            --construction-orange: #FF8200;
-            --dark-blue: #002a75;
-            --light-blue: #C4D8E2;
-            --text-gray: #333333;
-            --accent-gold: #FFD700;
-        }
-        
-        html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-gray);
-            background-color: #f8f9fa;
-            line-height: 1.6;
-        }
-        
-        /* Navigation */
-        .nav-header {
-            background: linear-gradient(135deg, var(--construction-blue) 0%, var(--dark-blue) 100%);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky; top: 0; z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        .nav-header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .nav-link {
-            color: white; transition: all 0.3s ease;
-            position: relative; padding: 0.5rem 1rem;
-        }
-        .nav-link::after {
-            content: ''; position: absolute; bottom: 0; left: 50%;
-            width: 0; height: 2px; background: var(--construction-orange);
-            transition: all 0.3s ease; transform: translateX(-50%);
-        }
-        .nav-link:hover::after { width: 80%; }
-        .nav-link:hover { color: var(--construction-orange); transform: translateY(-2px); }
-        
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--construction-blue) 0%, var(--dark-blue) 100%);
-            color: white; min-height: 90vh; display: flex;
-            align-items: center; position: relative; overflow: hidden;
-        }
-        .hero-section::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
-        }
-        .hero-content { position: relative; z-index: 1; }
-        .profile-img {
-            width: 220px; height: 220px; border-radius: 50%;
-            border: 6px solid var(--construction-orange);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            object-fit: cover; transition: transform 0.3s ease;
-        }
-        .profile-img:hover { transform: scale(1.05); }
-        
-        /* Buttons */
-        .btn {
-            padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 600;
-            transition: all 0.3s ease; display: inline-flex;
-            align-items: center; gap: 0.5rem; text-align: center;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--construction-orange) 0%, #e67300 100%);
-            color: white; box-shadow: 0 4px 15px rgba(255, 130, 0, 0.3);
-        }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(255, 130, 0, 0.4); }
-        .btn-secondary { background: transparent; border: 2px solid white; color: white; }
-        .btn-secondary:hover { background: white; color: var(--construction-blue); transform: translateY(-3px); }
-
-        /* General Section & Card Styles */
-        section { padding: 5rem 1.5rem; }
-        .section-title {
-            font-size: 2.5rem; font-weight: 700; color: var(--construction-blue);
-            margin-bottom: 3rem; position: relative; display: inline-block;
-        }
-        .section-title::after {
-            content: ''; position: absolute; bottom: -10px; left: 0;
-            width: 60px; height: 4px; background: var(--construction-orange);
-        }
-        .card {
-            background: white; border-radius: 12px; padding: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease; height: 100%; border: 1px solid #f0f0f0;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-        
-        /* Timeline */
-        .timeline-item {
-            position: relative; padding-left: 3rem; padding-bottom: 2rem;
-            border-left: 2px solid var(--construction-orange);
-        }
-        .timeline-item::before {
-            content: ''; position: absolute; left: -9px; top: 5px;
-            width: 16px; height: 16px; background: var(--construction-blue);
-            border-radius: 50%; border: 3px solid var(--construction-orange);
-            transition: transform 0.3s ease;
-        }
-        .timeline-item:hover::before { transform: scale(1.3); }
-
-        /* Project Card */
-        .project-card {
-            background: white; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease; display: flex; flex-direction: column;
-        }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
-        .project-body { flex-grow: 1; padding: 2rem; display: flex; flex-direction: column; }
-        .project-body ul { flex-grow: 1; }
-        
-        /* Stats Counter */
-        .stat-box {
-            background: linear-gradient(135deg, var(--construction-blue) 0%, var(--dark-blue) 100%);
-            color: white; padding: 2rem; border-radius: 12px;
-            text-align: center; transition: all 0.3s ease;
-        }
-        .stat-box:hover { transform: scale(1.05); }
-        .stat-number { font-size: 3rem; font-weight: 700; color: var(--construction-orange); }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--construction-blue) 0%, var(--dark-blue) 100%);
-            color: white; padding: 3rem 1.5rem 1rem;
-        }
-        
-        /* Animations */
+        /* Animation keyframes */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .fade-in-up { opacity: 0; }
-        .fade-in-up.is-visible { animation: fadeInUp 0.8s ease-out forwards; }
-        
-        /* Badge */
-        .badge {
-            background: var(--accent-gold); color: var(--construction-blue);
-            padding: 0.25rem 0.75rem; border-radius: 20px;
-            font-size: 0.85rem; font-weight: 600;
-            display: inline-block; margin-top: 0.5rem;
+
+        .fade-in-up {
+            opacity: 0;
         }
-        
-        @media (max-width: 768px) {
-            .hero-section { min-height: 70vh; text-align: center; }
-            .section-title { font-size: 2rem; }
-            .stat-number { font-size: 2rem; }
+
+        .fade-in-up.is-visible {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
     </style>
 </head>
 <body>
-    <!-- 
-    ======================================================
-    PORTFOLIO DATA CONFIGURATION
-    ======================================================
-    -->
-    <script>
-        const portfolioData = {
-            profile: {
-                name: "Roy Uzoma Lan",
-                titles: "Ph.D., PMP",
-                tagline: "AI-Driven Safety Engineer | Construction Management Expert",            
-                imageUrl: "assets/Profile_Picture.jpeg",
-                cvUrl: "assets/Roy_Lan_CV.pdf" 
-            },
-            stats: [
-                { value: 4.0, label: "PhD CGPA", suffix: "" },
-                { value: 10, label: "Publications", suffix: "+" },
-                { value: 8, label: "Major Awards", suffix: "+" },
-                { value: 1, label: "Projects Led", suffix: "M+" }
-            ],
-            education: [
-                {
-                    degree: "Doctor of Philosophy, Civil Engineering",
-                    institution: "The University of Texas at San Antonio",
-                    date: "August 2025",
-                    details: [
-                        { type: 'badge', text: 'GPA: 4.00/4.00' },
-                        { type: 'text', text: '<strong>Dissertation:</strong> Advancing Workplace Safety Through Intelligent Monitoring: Applications of Artificial Intelligence and Computer Vision in High-Risk Industrial Environments' },
-                        { type: 'text', text: '<strong>Advisor:</strong> Ibukun Gabriel Awolusi, Ph.D.' }
-                    ]
-                },
-                {
-                    degree: "Master of Science, Construction Management",
-                    institution: "University of Lagos, Nigeria",
-                    date: "November 2021",
-                    details: [
-                        { type: 'badge', text: 'CGPA: 4.79/5.00' },
-                        { type: 'badge', text: 'Best Graduating Student' },
-                        { type: 'text', text: '<strong>Thesis:</strong> Empirical modeling of causal interactions and stakeholder influence in construction project outcomes' },
-                    ]
-                },
-                {
-                    degree: "Bachelor of Science, Civil Engineering",
-                    institution: "Covenant University, Nigeria",
-                    date: "June 2015",
-                    details: []
-                }
-            ],
-            awards: [
-                { icon: "fas fa-trophy", title: "Best Paper Award", source: "CIB World Building Congress 2025", description: "Won in highly competitive category for \"UAV-DL-Based Computer Vision Framework for Construction Worker Pose Estimation\"" },
-                { icon: "fas fa-award", title: "Best Poster Award", source: "60th ASC International Conference 2024", description: "First place among international submissions, recognizing innovation and impact in construction research" },
-                { icon: "fas fa-graduation-cap", title: "ASCE UESI Student Scholarship", source: "Two-time recipient (2023, 2025)", description: "Competitive scholarship supporting student leaders with conference funding and admission" },
-                { icon: "fas fa-star", title: "Klesse Emerging Leader", source: "UTSA College of Engineering 2024-2025", description: "Selected as top 10 from over 1,000 candidates for leadership and academic excellence" }
-            ],
-            publications: {
-                fullListUrl: "assets/Publications_List.pdf",
-                journals: [
-                    { text: '<strong>Lan, R.</strong>, Awolusi, I., and Cai, J. (2024). "Computer Vision for Safety Management in the Steel Industry." <em>AI</em>, 5(3), 1192-1215.' },
-                    { text: '<strong>Lan, R.</strong>, Adenuga, O., and Awolusi, I. (2025). "Professionals\' Perspectives on the Factors Causing Construction Project Failures in Developing Countries." <em>International Journal of Construction Management</em>.' },
-                    { text: '<strong>Lan, R.</strong> and Awolusi, I. (2025). "The Elevated Construction Ergonomic Risk Index (ECERI): Contextualizing REBA for Height-Exposed Tasks." <em>Journal of Safety Research</em> (Under Review).' },
-                ],
-                conferences: [
-                    { text: '<strong>Lan, R.</strong> and Awolusi, I. (2025). "UAV-DL-Based Computer Vision Framework for Construction Worker Pose Estimation." <em>CIB World Building Congress</em>.', badge: 'Best Paper Award' },
-                    { text: '<strong>Lan, R.</strong>, Awolusi, I., and Cai, J. (2023). "Computer Vision for Pipeline Monitoring Using UAVs and Deep Learning." <em>ASCE Pipelines 2023</em>, 181-191.' },
-                    { text: '<strong>Lan, R.</strong>, Awolusi, I., and Cai, J. (2023). "Digital computer vision for safety management in Steel manufacturing." <em>AIST AISTech 2023</em>, 31-42.', badge: 'Certificate of Recognition' },
-                ]
-            },
-            projects: [
-                {
-                    icon: "fas fa-brain",
-                    title: "SOFIS System",
-                    subtitle: "Self-Organizing Fuzzy Inference System",
-                    description: "Production-ready Python implementation for automated ergonomic risk assessment with uncertainty quantification, adaptive learning, and task specialization.",
-                    tags: ["AI-powered pose estimation", "Monte Carlo uncertainty", "Adaptive fuzzy logic"],
-                    links: [
-                        { type: 'primary', text: "View Code", icon: "fab fa-github", url: "https://github.com/delubobo/sofis-system" },
-                        { type: 'secondary', text: "Documentation", icon: "fas fa-book", url: "assets/SOFIS_Documentation.pdf", download: true }
-                    ]
-                },
-                {
-                    icon: "fas fa-calculator",
-                    title: "ECERI Risk Calculator",
-                    subtitle: "Elevated Construction Ergonomic Risk Index",
-                    description: "Interactive web-based tool for ergonomic risk evaluation in height-exposed construction tasks, featuring financial impact analysis and real-time risk assessment.",
-                    tags: ["Context-aware REBA", "Financial impact analysis", "Real-time assessment"],
-                    links: [
-                        { type: 'primary', text: "Live Demo", icon: "fas fa-external-link-alt", url: "https://delubobo.github.io/eceri-risk_cost_calculator_/" },
-                        { type: 'secondary', text: "Research Paper", icon: "fas fa-file-pdf", url: "assets/ECERI_Paper.pdf", download: true }
-                    ]
-                }
-            ],
-            contact: {
-                email: "roylanuzoma@gmail.com",
-                phone: "(726) 219-1465",
-                linkedin: "https://linkedin.com/in/roylanuzoma",
-                github: "https://github.com/delubobo"
-            }
-        };
-    </script>
-    
     <!-- Navigation -->
     <nav class="nav-header">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="#home" class="text-2xl font-bold text-white" id="nav-name"></a>
-                <div class="hidden md:flex space-x-1">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#education" class="nav-link">Education</a>
-                    <a href="#awards" class="nav-link">Awards</a>
-                    <a href="#publications" class="nav-link">Publications</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-white"><i class="fas fa-bars text-2xl"></i></button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden pb-4">
-                <a href="#home" class="block py-2 text-white hover:text-orange-400">Home</a>
-                <a href="#about" class="block py-2 text-white hover:text-orange-400">About</a>
-                <a href="#education" class="block py-2 text-white hover:text-orange-400">Education</a>
-                <a href="#awards" class="block py-2 text-white hover:text-orange-400">Awards</a>
-                <a href="#publications" class="block py-2 text-white hover:text-orange-400">Publications</a>
-                <a href="#projects" class="block py-2 text-white hover:text-orange-400">Projects</a>
-                <a href="#contact" class="block py-2 text-white hover:text-orange-400">Contact</a>
-            </div>
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-logo">Roy Lan</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#awards" class="nav-link">Awards</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="hero-content grid md:grid-cols-2 gap-8 items-center">
-                <div class="text-center md:text-left">
-                    <h1 id="hero-name" class="text-5xl md:text-6xl font-bold mb-4 fade-in-up"></h1>
-                    <p id="hero-titles" class="text-2xl mb-2 fade-in-up" style="animation-delay: 0.2s"></p>
-                    <p id="hero-tagline" class="text-xl mb-6 fade-in-up" style="animation-delay: 0.4s"></p>
-                    <p class="text-lg mb-8 opacity-90 fade-in-up" style="animation-delay: 0.6s">
-                        Advancing workplace safety through intelligent monitoring in high-risk industrial environments. 
-                        PhD in Civil Engineering (4.0 GPA) with expertise in Computer Vision, AI, and Construction Safety.
-                    </p>
-                    <div class="flex flex-wrap gap-4 justify-center md:justify-start fade-in-up" style="animation-delay: 0.8s">
-                        <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
-                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get In Touch</a>
-                    </div>
-                </div>
-                <div class="flex justify-center fade-in-up" style="animation-delay: 1s">
-                    <img src="" alt="Roy Uzoma Lan" id="profile-image" class="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
+    <section id="home" class="hero-section"></section>
 
     <!-- Stats Section -->
-    <section class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div id="stats-container" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+    <section class="section" style="background: var(--bg-tertiary); padding: 3rem var(--spacing-lg);">
+        <div class="container">
+            <div id="stats-container" class="grid grid-4 gap-lg"></div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="section-title text-center">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <p class="text-lg mb-4">
-                        Certified professional with a Ph.D. in Civil Engineering from the University of Texas at San Antonio (GPA: 4.00/4.00) and a Master’s in Construction Management with Distinction from the University of Lagos. I specialize in leveraging Artificial Intelligence and Computer Vision to enhance safety in construction and high-risk industrial environments.
-                    </p>
-                    <p class="text-lg mb-4">
-                        With PMP certification and extensive experience leading large-scale projects, I bring a unique combination of technical expertise and practical leadership. My background includes project management, structural engineering, and safety engineering, honed through roles ranging over 7+ years.
-                    </p>
-                    <p class="text-lg mb-6">
-                        My career is marked by prestigious awards, scholarships, etc. As a mentor and educator, I have guided students and professionals while collaborating with leading academics and industry experts. I view every opportunity as a chance to demonstrate excellence, driven by hard work and consistency.
-                    </p>
-                    <a id="download-cv-about" href="#" download class="btn btn-primary">
-                        <i class="fas fa-download"></i> Download Full CV
-                    </a>
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">About Me</h2>
+            <div class="grid grid-2 gap-xl" style="align-items: center;">
+                <div class="fade-in-up">
+                    <p class="mb-3" id="about-bio" style="font-size: var(--font-size-lg); line-height: 1.8;"></p>
+                    <p class="mb-4" id="about-long-bio" style="font-size: var(--font-size-lg); line-height: 1.8;"></p>
                 </div>
-                <div class="card">
-                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Key Expertise</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i><span><strong>AI & Computer Vision:</strong> Advanced pose estimation, hazard detection</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i><span><strong>Construction Safety:</strong> Zero-casualty project leadership, HSE management</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i><span><strong>Project Management:</strong> PMP certified, $1M+ projects, multi-engineer teams</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-orange-500 mt-1 mr-3"></i><span><strong>Research Excellence:</strong> 10+ publications, multiple best paper awards</span></li>
-                    </ul>
+                <div class="card fade-in-up">
+                    <h3 class="card-title"><i class="fas fa-bullseye" style="color: var(--construction-orange);"></i> Research Interests</h3>
+                    <div class="card-body">
+                        <ul id="research-interests-list" style="list-style: none; padding: 0;"></ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sections for Education, Awards, Publications, Projects, Contact -->
-    <section id="education" class="bg-gray-100"><div class="max-w-7xl mx-auto px-4"><h2 class="section-title text-center">Education</h2><div id="education-container" class="relative"></div></div></section>
-    <section id="awards" class="bg-white"><div class="max-w-7xl mx-auto px-4"><h2 class="section-title text-center">Awards & Recognition</h2><div id="awards-container" class="grid md:grid-cols-2 gap-6"></div></div></section>
-    <section id="publications" class="bg-gray-100"><div class="max-w-7xl mx-auto px-4"><h2 class="section-title text-center">Selected Publications</h2><div class="mb-8"><h3 class="text-2xl font-bold text-blue-900 mb-4"><i class="fas fa-book text-orange-500 mr-2"></i>Peer-Reviewed Journal Articles</h3><div id="journal-articles-container" class="space-y-3"></div></div><div><h3 class="text-2xl font-bold text-blue-900 mb-4"><i class="fas fa-file-alt text-orange-500 mr-2"></i>Selected Conference Publications</h3><div id="conference-papers-container" class="space-y-3"></div></div><div class="mt-8 text-center"><a id="download-pubs" href="#" class="btn btn-primary" download><i class="fas fa-file-pdf"></i> Download Complete Publications List</a></div></div></section>
-    <section id="projects" class="bg-white"><div class="max-w-7xl mx-auto px-4"><h2 class="section-title text-center">Featured Projects</h2><div id="projects-container" class="grid md:grid-cols-2 gap-8"></div></div></section>
-    <section id="contact" class="bg-gray-100"><div class="max-w-7xl mx-auto px-4"><h2 class="section-title text-center">Get In Touch</h2><div class="grid md:grid-cols-2 gap-8"><div id="contact-info-container"></div><div><h3 class="text-2xl font-bold text-blue-900 mb-6">Send a Message</h3><form id="contact-form" class="space-y-4"><div><input type="text" name="name" required placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></div><div><input type="email" name="email" required placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></div><div><textarea name="message" rows="5" required placeholder="Your Message" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea></div><button type="submit" class="btn btn-primary w-full justify-center"><span id="submit-icon"><i class="fas fa-paper-plane"></i></span><span id="submit-text"> Send Message</span></button><div id="form-feedback" class="text-center mt-2 h-5 opacity-0"></div></form></div></div></div></section>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title center">Professional Experience</h2>
+            <div id="experience-container"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Core Skills & Expertise</h2>
+            <div id="skills-container" class="grid grid-2 gap-lg"></div>
+
+            <!-- Professional Skills -->
+            <div class="mt-4">
+                <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue); text-align: center;">
+                    Professional Competencies
+                </h3>
+                <div id="professional-skills-container" class="grid grid-3 gap-lg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title center">Education</h2>
+            <div id="education-container"></div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Awards & Recognition</h2>
+            <div id="awards-container" class="grid grid-2 gap-lg"></div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title center">Selected Publications</h2>
+
+            <div class="mb-4">
+                <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue);">
+                    <i class="fas fa-book" style="color: var(--construction-orange);"></i>
+                    Peer-Reviewed Journal Articles
+                </h3>
+                <div id="journals-container"></div>
+            </div>
+
+            <div class="mb-4">
+                <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue);">
+                    <i class="fas fa-file-alt" style="color: var(--construction-orange);"></i>
+                    Conference Publications
+                </h3>
+                <div id="conferences-container"></div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="assets/documents/publications/Publications_List.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-file-pdf"></i> Download Complete Publications List
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Featured Projects</h2>
+            <div id="projects-container" class="grid grid-2 gap-xl"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title center">Get In Touch</h2>
+            <div class="grid grid-2 gap-xl">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue);">
+                        Contact Information
+                    </h3>
+                    <div id="contact-container"></div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue);">
+                        Send a Message
+                    </h3>
+                    <form id="contact-form" class="fade-in-up">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="form-feedback" class="mt-2" style="text-align: center; opacity: 0; transition: opacity 0.3s;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex justify-center gap-6 mb-4" id="footer-socials"></div>
-            <p>&copy; <span id="copyright-year"></span> <span id="footer-name"></span>. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Roy Uzoma Lan, Ph.D., PMP</h3>
+                    <p style="opacity: 0.8;">AI-Driven Safety Engineer | Construction Management Expert</p>
+                    <p style="opacity: 0.8;">Advancing workplace safety through intelligent monitoring in high-risk industrial environments.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#about" style="color: white; opacity: 0.8;">About</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#experience" style="color: white; opacity: 0.8;">Experience</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#publications" style="color: white; opacity: 0.8;">Publications</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#projects" style="color: white; opacity: 0.8;">Projects</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#contact" style="color: white; opacity: 0.8;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Research Areas</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem; opacity: 0.8;">Artificial Intelligence</li>
+                        <li style="margin-bottom: 0.5rem; opacity: 0.8;">Computer Vision</li>
+                        <li style="margin-bottom: 0.5rem; opacity: 0.8;">Construction Safety</li>
+                        <li style="margin-bottom: 0.5rem; opacity: 0.8;">Ergonomic Risk Assessment</li>
+                        <li style="margin-bottom: 0.5rem; opacity: 0.8;">Deep Learning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="social-links" id="footer-socials"></div>
+                <p>&copy; <span id="copyright-year"></span> <span id="footer-name">Roy Uzoma Lan</span>. All rights reserved.</p>
+                <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 0.5rem;">
+                    Built with passion for safety and innovation
+                </p>
+            </div>
         </div>
     </footer>
 
-    <!-- 
-    ======================================================
-    SUMMARY SCRIPT
-    ======================================================
-    -->
+    <!-- Scripts -->
+    <script src="assets/js/data-loader.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Initialize Portfolio -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const { profile, stats, education, awards, publications, projects, contact } = portfolioData;
+        // Load and render portfolio data
+        (async function() {
+            try {
+                // Load portfolio data
+                const data = await window.portfolioDataLoader.loadData();
+                window.portfolioData = data; // Make globally available
 
-            // --- 1. DYNAMIC DATA POPULATION ---
-            const populate = (id, content) => { document.getElementById(id).innerHTML = content; };
-            const setAttr = (id, attr, value) => { document.getElementById(id)[attr] = value; };
+                // Initialize components renderer
+                const components = new PortfolioComponents(data);
 
-            // Hero and General Info
-            populate('nav-name', profile.name);
-            populate('hero-name', profile.name);
-            populate('hero-titles', profile.titles);
-            populate('hero-tagline', profile.tagline);
-            setAttr('profile-image', 'src', profile.imageUrl);
-            setAttr('download-cv-about', 'href', profile.cvUrl);
-            populate('footer-name', profile.name);
-            populate('copyright-year', new Date().getFullYear());
+                // Render all sections
+                components.renderHero('home');
+                components.renderStats('stats-container');
+                components.renderEducation('education-container');
+                components.renderAwards('awards-container');
+                components.renderPublications('journals-container', 'conferences-container');
+                components.renderProjects('projects-container');
+                components.renderExperience('experience-container');
+                components.renderSkills('skills-container');
+                components.renderContact('contact-container');
+                components.renderFooter('footer-socials');
 
-            // Stats
-            document.getElementById('stats-container').innerHTML = stats.map(stat => `
-                <div class="stat-box">
-                    <div class="stat-number" data-target="${stat.value}">${stat.value > 10 ? 0 : '0.0'}${stat.suffix}</div>
-                    <p class="text-lg">${stat.label}</p>
-                </div>`).join('');
+                // Render About section manually
+                document.getElementById('about-bio').textContent = data.profile.bio;
+                document.getElementById('about-long-bio').textContent = data.profile.longBio;
 
-            // Education
-            document.getElementById('education-container').innerHTML = education.map(item => {
-                const detailsHtml = item.details.map(d => d.type === 'badge' ? `<span class="badge mr-2">${d.text}</span>` : `<p class="text-gray-700 mt-2">${d.text}</p>`).join('');
-                return `
-                    <div class="timeline-item">
-                        <div class="card">
-                            <h3 class="text-2xl font-bold text-blue-900 mb-2">${item.degree}</h3>
-                            <p class="text-orange-600 font-semibold mb-2">${item.institution} | ${item.date}</p>
-                            <div class="mt-3">${detailsHtml}</div>
+                // Render research interests
+                const interestsList = document.getElementById('research-interests-list');
+                interestsList.innerHTML = data.profile.researchInterests.map(interest => `
+                    <li style="padding: var(--spacing-md); margin-bottom: var(--spacing-sm); background: var(--bg-tertiary); border-radius: var(--radius-md); border-left: 3px solid var(--construction-orange);">
+                        <i class="fas fa-check-circle" style="color: var(--construction-orange); margin-right: var(--spacing-sm);"></i>
+                        ${interest}
+                    </li>
+                `).join('');
+
+                // Render professional skills
+                const professionalSkills = document.getElementById('professional-skills-container');
+                if (professionalSkills && data.skills.professional) {
+                    professionalSkills.innerHTML = data.skills.professional.map(skill => `
+                        <div class="card fade-in-up" style="text-align: center;">
+                            <div class="card-icon">
+                                <i class="${skill.icon}"></i>
+                            </div>
+                            <h4 class="card-title" style="font-size: var(--font-size-lg);">${skill.name}</h4>
+                            <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">${skill.description}</p>
                         </div>
-                    </div>`;
-            }).join('');
+                    `).join('');
+                }
 
-            // Awards
-            document.getElementById('awards-container').innerHTML = awards.map(award => `
-                <div class="card">
-                    <div class="flex items-start gap-4">
-                        <i class="${award.icon} text-4xl text-orange-500"></i>
+                // Update nav logo
+                document.getElementById('nav-logo').textContent = data.profile.firstName + ' ' + data.profile.lastName;
+
+                // Trigger animations after content is loaded
+                setTimeout(() => {
+                    document.querySelectorAll('.fade-in-up').forEach(el => {
+                        el.classList.add('is-visible');
+                    });
+                }, 100);
+
+            } catch (error) {
+                console.error('Error initializing portfolio:', error);
+                document.body.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 2rem;">
                         <div>
-                            <h3 class="text-xl font-bold text-blue-900 mb-2">${award.title}</h3>
-                            <p class="text-orange-600 font-semibold mb-2">${award.source}</p>
-                            <p class="text-gray-700">${award.description}</p>
+                            <h1 style="color: var(--construction-orange); margin-bottom: 1rem;">
+                                <i class="fas fa-exclamation-triangle"></i> Error Loading Portfolio
+                            </h1>
+                            <p style="color: var(--text-secondary);">There was an error loading the portfolio data. Please refresh the page.</p>
+                            <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 1rem;">
+                                <i class="fas fa-redo"></i> Refresh Page
+                            </button>
                         </div>
                     </div>
-                </div>`).join('');
-
-            // Publications
-            populate('journal-articles-container', publications.journals.map(p => `<div class="publication-item"><p class="text-gray-800">${p.text}</p></div>`).join(''));
-            populate('conference-papers-container', publications.conferences.map(p => `<div class="publication-item"><p class="text-gray-800">${p.text}${p.badge ? `<span class="badge ml-2">${p.badge}</span>` : ''}</p></div>`).join(''));
-            setAttr('download-pubs', 'href', publications.fullListUrl);
-
-            // Projects
-            document.getElementById('projects-container').innerHTML = projects.map(project => {
-                const tagsHtml = project.tags.map(tag => `<li class="flex items-start"><i class="fas fa-check text-green-600 mt-1 mr-2"></i><span>${tag}</span></li>`).join('');
-                const linksHtml = project.links.map(link => {
-                    const btnClass = link.type === 'primary' ? 'btn-primary' : 'btn-secondary text-blue-900 border-blue-900 hover:bg-blue-900 hover:text-white';
-                    return `<a href="${link.url}" class="btn ${btnClass} flex-1 justify-center" ${link.download ? 'download' : ''} target="_blank" rel="noopener noreferrer"><i class="${link.icon}"></i> ${link.text}</a>`;
-                }).join('');
-                return `
-                    <div class="project-card">
-                        <div class="bg-gray-50 p-6 border-b">
-                            <h3 class="text-2xl font-bold text-blue-900 mb-2"><i class="${project.icon} mr-2 text-orange-500"></i>${project.title}</h3>
-                            <p class="text-lg text-gray-600">${project.subtitle}</p>
-                        </div>
-                        <div class="project-body">
-                            <p class="text-gray-700 mb-4">${project.description}</p>
-                            <ul class="space-y-2 text-gray-700 mb-6">${tagsHtml}</ul>
-                            <div class="flex gap-3 mt-auto">${linksHtml}</div>
-                        </div>
-                    </div>`;
-            }).join('');
-
-            // Contact Info & Footer Socials
-            const contactItems = [
-                { href: `mailto:${contact.email}`, icon: 'fas fa-envelope', label: 'Email', value: contact.email },
-                { href: `tel:${contact.phone.replace(/\D/g,'')}`, icon: 'fas fa-phone', label: 'Phone', value: contact.phone },
-                { href: contact.linkedin, icon: 'fab fa-linkedin', label: 'LinkedIn', value: 'linkedin.com/in/roylanuzoma' },
-                { href: contact.github, icon: 'fab fa-github', label: 'GitHub', value: 'github.com/delubobo' },
-            ];
-            populate('contact-info-container', contactItems.map(item => `
-                <a href="${item.href}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 mb-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <i class="${item.icon} text-2xl text-orange-500 w-8 text-center"></i>
-                    <div>
-                        <p class="font-semibold text-blue-900">${item.label}</p>
-                        <p class="text-gray-600">${item.value}</p>
-                    </div>
-                </a>`).join(''));
-            populate('footer-socials', Object.values(contact).filter(v => typeof v === 'string' && v.startsWith('http')).map(href => {
-                const icon = href.includes('linkedin') ? 'fab fa-linkedin' : 'fab fa-github';
-                return `<a href="${href}" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-300 hover:text-orange-400 transition"><i class="${icon}"></i></a>`;
-            }).join('') + `<a href="mailto:${contact.email}" class="text-3xl text-gray-300 hover:text-orange-400 transition"><i class="fas fa-envelope"></i></a>`);
-
-
-            // --- 2. UI INTERACTIONS & ANIMATIONS ---
-            // Mobile Menu
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-            });
-
-            // Navbar Scroll Effect
-            const nav = document.querySelector('.nav-header');
-            window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
-
-            // Contact Form
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const formData = new FormData(this);
-                const name = formData.get('name');
-                const email = formData.get('email');
-                const message = formData.get('message');
-                window.location.href = `mailto:${contact.email}?subject=Message from ${name} via Portfolio&body=${encodeURIComponent(message)}%0A%0AFrom:%20${name}%0AEmail:%20${email}`;
-                
-                const feedbackEl = document.getElementById('form-feedback');
-                feedbackEl.textContent = 'Thank you! Opening your email client...';
-                feedbackEl.classList.add('text-green-600');
-                feedbackEl.style.opacity = '1';
-                this.reset();
-                setTimeout(() => { feedbackEl.style.opacity = '0'; }, 4000);
-            });
-
-            // Intersection Observer for Animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        const statNumber = entry.target.querySelector('.stat-number');
-                        if (statNumber && !statNumber.classList.contains('counted')) {
-                            statNumber.classList.add('counted');
-                            const target = +statNumber.dataset.target;
-                            const suffix = portfolioData.stats.find(s => s.value === target)?.suffix || '';
-                            let i = 0;
-                            const increment = target / 100;
-                            const updateCount = () => {
-                                if (i < target) {
-                                    i += increment;
-                                    statNumber.innerText = (target > 10 ? Math.ceil(i) : i.toFixed(1)) + suffix;
-                                    requestAnimationFrame(updateCount);
-                                } else {
-                                    statNumber.innerText = target + suffix;
-                                }
-                            };
-                            updateCount();
-                        }
-                        // observer.unobserve(entry.target); // Optional: unobserve after first animation
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.card, .timeline-item, .project-card, .stat-box').forEach(el => {
-                el.classList.add('fade-in-up');
-                observer.observe(el);
-            });
-        });
+                `;
+            }
+        })();
     </script>
 </body>
 </html>
-
-
