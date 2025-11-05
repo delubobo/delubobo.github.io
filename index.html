@@ -114,6 +114,14 @@
         </div>
     </section>
 
+    <!-- Research Impact Dashboard -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Research Impact</h2>
+            <div id="research-impact-container" class="grid grid-4 gap-lg"></div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="section section-alt">
         <div class="container">
@@ -141,8 +149,16 @@
         </div>
     </section>
 
+    <!-- Key Achievements -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Key Achievements</h2>
+            <div id="key-achievements-container" class="grid grid-2 gap-xl"></div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="section section-alt">
+    <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title center">Core Skills & Expertise</h2>
             <div id="skills-container" class="grid grid-2 gap-lg"></div>
@@ -154,6 +170,22 @@
                 </h3>
                 <div id="professional-skills-container" class="grid grid-3 gap-lg"></div>
             </div>
+
+            <!-- Tools & Technologies -->
+            <div class="mt-4">
+                <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue); text-align: center;">
+                    Tools & Technologies
+                </h3>
+                <div id="tools-technologies-container" class="grid grid-4 gap-lg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Professional Certifications</h2>
+            <div id="certifications-container"></div>
         </div>
     </section>
 
@@ -207,6 +239,22 @@
         <div class="container">
             <h2 class="section-title center">Featured Projects</h2>
             <div id="projects-container" class="grid grid-2 gap-xl"></div>
+        </div>
+    </section>
+
+    <!-- Professional Memberships -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title center">Professional Memberships</h2>
+            <div id="memberships-container" class="grid grid-3 gap-lg"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title center">Recommendations</h2>
+            <div id="testimonials-container" class="grid grid-2 gap-xl"></div>
         </div>
     </section>
 
@@ -312,12 +360,18 @@
                 // Render all sections
                 components.renderHero('home');
                 components.renderStats('stats-container');
+                components.renderResearchImpact('research-impact-container');
+                components.renderExperience('experience-container');
+                components.renderKeyAchievements('key-achievements-container');
+                components.renderSkills('skills-container');
+                components.renderToolsAndTechnologies('tools-technologies-container');
+                components.renderCertifications('certifications-container');
                 components.renderEducation('education-container');
                 components.renderAwards('awards-container');
                 components.renderPublications('journals-container', 'conferences-container');
                 components.renderProjects('projects-container');
-                components.renderExperience('experience-container');
-                components.renderSkills('skills-container');
+                components.renderMemberships('memberships-container');
+                components.renderTestimonials('testimonials-container');
                 components.renderContact('contact-container');
                 components.renderFooter('footer-socials');
 

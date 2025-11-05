@@ -131,6 +131,29 @@ class PortfolioApp {
             rootMargin: '0px 0px -50px 0px'
         };
 
+        const animateStatNumber = (element) => {
+            element.classList.add('counted');
+            const target = parseFloat(element.getAttribute('data-target'));
+            const suffix = element.getAttribute('data-suffix') || '';
+            const duration = 2000; // 2 seconds
+            const steps = 60;
+            const increment = target / steps;
+            let current = 0;
+            const stepDuration = duration / steps;
+
+            const updateNumber = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = (target > 10 ? Math.ceil(current) : current.toFixed(1)) + suffix;
+                    setTimeout(updateNumber, stepDuration);
+                } else {
+                    element.textContent = target + suffix;
+                }
+            };
+
+            updateNumber();
+        };
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -139,7 +162,7 @@ class PortfolioApp {
                     // Animate stat numbers
                     const statNumber = entry.target.querySelector('.stat-number');
                     if (statNumber && !statNumber.classList.contains('counted')) {
-                        this.animateStatNumber(statNumber);
+                        animateStatNumber(statNumber);
                     }
 
                     // Animate skill bars
@@ -164,33 +187,6 @@ class PortfolioApp {
             el.classList.add('fade-in-up');
             observer.observe(el);
         });
-    }
-
-    /**
-     * Animate stat numbers with counting effect
-     * @param {HTMLElement} element - Stat number element
-     */
-    animateStatNumber(element) {
-        element.classList.add('counted');
-        const target = parseFloat(element.getAttribute('data-target'));
-        const suffix = element.getAttribute('data-suffix') || '';
-        const duration = 2000; // 2 seconds
-        const steps = 60;
-        const increment = target / steps;
-        let current = 0;
-        const stepDuration = duration / steps;
-
-        const updateNumber = () => {
-            current += increment;
-            if (current < target) {
-                element.textContent = (target > 10 ? Math.ceil(current) : current.toFixed(1)) + suffix;
-                setTimeout(updateNumber, stepDuration);
-            } else {
-                element.textContent = target + suffix;
-            }
-        };
-
-        updateNumber();
     }
 
     /**

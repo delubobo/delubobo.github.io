@@ -362,6 +362,238 @@ class PortfolioComponents {
 
         return `${startStr} - ${endStr} (${duration})`;
     }
+
+    /**
+     * Render research impact highlights
+     * @param {string} containerId - Container element ID
+     */
+    renderResearchImpact(containerId = 'research-impact-container') {
+        const container = document.getElementById(containerId);
+        if (!container || !this.data.researchImpact) return;
+
+        const { highlights } = this.data.researchImpact;
+
+        container.innerHTML = highlights.map(item => `
+            <div class="card fade-in-up" style="text-align: center;">
+                <div class="card-icon">
+                    <i class="${item.icon}"></i>
+                </div>
+                <h3 class="card-title" style="font-size: var(--font-size-xl);">${item.metric}</h3>
+                <p style="color: var(--construction-orange); font-weight: 600; margin-bottom: var(--spacing-sm);">
+                    ${item.description}
+                </p>
+                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                    ${item.impact}
+                </p>
+            </div>
+        `).join('');
+    }
+
+    /**
+     * Render key achievements
+     * @param {string} containerId - Container element ID
+     */
+    renderKeyAchievements(containerId = 'key-achievements-container') {
+        const container = document.getElementById(containerId);
+        if (!container || !this.data.keyAchievements) return;
+
+        container.innerHTML = this.data.keyAchievements.map(category => `
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        <i class="${category.icon}" style="color: var(--construction-orange); margin-right: var(--spacing-sm);"></i>
+                        ${category.category}
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <ul style="list-style: none; padding: 0;">
+                        ${category.achievements.map(achievement => `
+                            <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: start; gap: var(--spacing-sm);">
+                                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                                <span style="color: var(--text-secondary);">${achievement}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    /**
+     * Render certifications
+     * @param {string} containerId - Container element ID
+     */
+    renderCertifications(containerId = 'certifications-container') {
+        const container = document.getElementById(containerId);
+        if (!container || !this.data.certifications) return;
+
+        const { professional, technical } = this.data.certifications;
+
+        container.innerHTML = `
+            <div class="mb-4">
+                <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue);">
+                    <i class="fas fa-certificate" style="color: var(--construction-orange);"></i>
+                    Professional Certifications
+                </h3>
+                <div class="grid grid-2 gap-lg">
+                    ${professional.map(cert => `
+                        <div class="card fade-in-up">
+                            <div class="flex" style="align-items: start; gap: var(--spacing-lg);">
+                                <div class="card-icon">
+                                    <i class="${cert.icon}"></i>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h4 class="card-title" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                                        ${cert.name}
+                                    </h4>
+                                    <p style="color: var(--construction-orange); font-weight: 600; margin-bottom: var(--spacing-sm);">
+                                        ${cert.issuer} | ${cert.year}
+                                    </p>
+                                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md);">
+                                        ${cert.description}
+                                    </p>
+                                    <div class="project-tags">
+                                        ${cert.skills.map(skill => `<span class="project-tag">${skill}</span>`).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            <div>
+                <h3 class="mb-3" style="font-size: var(--font-size-2xl); color: var(--construction-blue);">
+                    <i class="fas fa-brain" style="color: var(--construction-orange);"></i>
+                    Technical Certifications
+                </h3>
+                <div class="grid grid-2 gap-lg">
+                    ${technical.map(cert => `
+                        <div class="card fade-in-up">
+                            <div class="flex" style="align-items: start; gap: var(--spacing-lg);">
+                                <div style="font-size: 2.5rem; color: var(--construction-orange);">
+                                    <i class="${cert.icon}"></i>
+                                </div>
+                                <div style="flex: 1;">
+                                    <h4 style="font-size: var(--font-size-lg); color: var(--construction-blue); font-weight: 700; margin-bottom: var(--spacing-sm);">
+                                        ${cert.name}
+                                    </h4>
+                                    <p style="color: var(--construction-orange); font-weight: 600; margin-bottom: var(--spacing-md);">
+                                        ${cert.issuer} | ${cert.year}
+                                    </p>
+                                    <div class="project-tags">
+                                        ${cert.skills.map(skill => `<span class="project-tag">${skill}</span>`).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    /**
+     * Render tools and technologies
+     * @param {string} containerId - Container element ID
+     */
+    renderToolsAndTechnologies(containerId = 'tools-technologies-container') {
+        const container = document.getElementById(containerId);
+        if (!container || !this.data.toolsAndTechnologies) return;
+
+        const { programmingLanguages, aiFrameworks, constructionSoftware, dataAndCloud } = this.data.toolsAndTechnologies;
+
+        const allTools = [
+            { title: 'Programming', tools: programmingLanguages },
+            { title: 'AI/ML', tools: aiFrameworks },
+            { title: 'Construction', tools: constructionSoftware },
+            { title: 'Data & Cloud', tools: dataAndCloud }
+        ];
+
+        container.innerHTML = allTools.map(category => `
+            <div class="card fade-in-up">
+                <h4 class="card-title" style="text-align: center; font-size: var(--font-size-lg);">
+                    ${category.title}
+                </h4>
+                <div class="card-body">
+                    ${category.tools.slice(0, 5).map(tool => `
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <div class="flex" style="justify-content: space-between; margin-bottom: 0.25rem;">
+                                <span style="font-weight: 600; color: var(--text-primary); font-size: var(--font-size-sm);">${tool.name}</span>
+                                <span style="color: var(--text-tertiary); font-size: var(--font-size-xs);">${tool.experience}</span>
+                            </div>
+                            <div class="skill-bar" style="height: 6px;">
+                                <div class="skill-progress" data-level="${tool.level}" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `).join('');
+    }
+
+    /**
+     * Render professional memberships
+     * @param {string} containerId - Container element ID
+     */
+    renderMemberships(containerId = 'memberships-container') {
+        const container = document.getElementById(containerId);
+        if (!container || !this.data.professionalMemberships) return;
+
+        container.innerHTML = this.data.professionalMemberships.map(membership => `
+            <div class="card fade-in-up" style="text-align: center;">
+                <div class="card-icon">
+                    <i class="${membership.icon}"></i>
+                </div>
+                <h4 class="card-title" style="font-size: var(--font-size-lg);">
+                    ${membership.organization}
+                </h4>
+                <p style="color: var(--construction-orange); font-weight: 600; margin-bottom: var(--spacing-sm);">
+                    ${membership.role}
+                </p>
+                <p style="color: var(--text-tertiary); font-size: var(--font-size-sm); margin-bottom: var(--spacing-md);">
+                    Member since ${membership.since}
+                </p>
+                <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                    ${membership.description}
+                </p>
+            </div>
+        `).join('');
+    }
+
+    /**
+     * Render testimonials
+     * @param {string} containerId - Container element ID
+     */
+    renderTestimonials(containerId = 'testimonials-container') {
+        const container = document.getElementById(containerId);
+        if (!container || !this.data.testimonials) return;
+
+        container.innerHTML = this.data.testimonials.map(testimonial => `
+            <div class="card fade-in-up">
+                <div class="card-body">
+                    <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--construction-orange); opacity: 0.3; margin-bottom: var(--spacing-md);"></i>
+                    <p style="font-size: var(--font-size-lg); line-height: 1.8; color: var(--text-secondary); font-style: italic; margin-bottom: var(--spacing-lg);">
+                        "${testimonial.quote}"
+                    </p>
+                    <div class="flex" style="align-items: center; gap: var(--spacing-md); padding-top: var(--spacing-md); border-top: 2px solid var(--border-color);">
+                        ${testimonial.photo ? `<img src="${testimonial.photo}" alt="${testimonial.name}" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">` : `<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--construction-blue); display: flex; align-items: center; justify-content: center; color: white; font-size: var(--font-size-xl); font-weight: 700;">${testimonial.name.charAt(0)}</div>`}
+                        <div>
+                            <h5 style="color: var(--construction-blue); font-weight: 700; margin-bottom: 0.25rem;">
+                                ${testimonial.name}
+                            </h5>
+                            <p style="color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: 0.25rem;">
+                                ${testimonial.title}
+                            </p>
+                            <p style="color: var(--text-tertiary); font-size: var(--font-size-xs);">
+                                ${testimonial.organization} | ${testimonial.relationship}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
 }
 
 // Make components class globally available
